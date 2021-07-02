@@ -1,0 +1,133 @@
+2021-07-02 19:16:19 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.5 on MacBook-Pro-de-Antonio.local with PID 59588 (/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by antoniosanchez in /Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo)
+2021-07-02 19:16:19 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-07-02 19:16:20 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 6.469 seconds (JVM running for 7.899)
+2021-07-02 19:16:20 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+2021-07-02 19:16:20 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Application starts...
+2021-07-02 19:16:20 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2021-07-02 19:16:20 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello microservices
+2021-07-02 19:16:20 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2021-07-02 19:16:20 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Starting filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2021-07-02 19:16:20 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-07-02 19:16:21 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Connection established.
+2021-07-02 19:16:21 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Receiving status stream.
+2021-07-02 19:16:21 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @harumi182000: In commemorating Myanmar’s Spring Revolution, a beer producer in Japan produced beer to donate some profits to the people…
+2021-07-02 19:16:21 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @2021Revtweets: Residents from Amyint village,Monywa prayed for the restoration of Federal Democracy in Myanmar, immediate release of al…
+2021-07-02 19:16:21 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text If I could time travel with this, and show myself I was on it, teen me would probably ask "what's bandcamp?" but would be so stoked that adult me could take the soup of my life at the time and use it to make an album and that people like @modernistwitch would think it was cool.
+2021-07-02 19:16:22 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text In commemorating Myanmar’s Spring Revolution, a beer producer in Japan produced beer to donate some profits to the people of Myanmar in Revolution. It’s sold on WITCH CRAFT. #July2Coup #WhatsHappeningInMyanmar https://t.co/ZgvKEL7d5C
+2021-07-02 19:16:22 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @FilmCriticMaybe: Nerds discover to their dismay that a follow up to Alien, a movie about a group of miners left to die with a murderous…
+2021-07-02 19:16:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @jongseodg: ENHYPEN JAPAN DEBUT is really just counting down!!! video capture has been released by AMI Men's and Woman's Spring Summer 2…
+2021-07-02 19:16:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text We keep praying for everyone 🙏
+#July2Coup
+#WhatsHappeningInMyanmar https://t.co/MyVJJdFEWq
+2021-07-02 19:16:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Thebaker_: Enjoyment platter😋 10pcs samosas, 10pcs spring rolls, 10pcs meat pies 3k only 
+
+📍kaduna pickup/delivery 📞08131906583 https:/…
+2021-07-02 19:16:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @AngelaRayner Peter Mandlesson time and again , Keith Vaz, Liverpool CC, McCluskey, Mass murderer Teflon Tony etc etc etc Oh and taxpayers money on £200 plus ear pods . Goose and Gander spring to mind
+2021-07-02 19:16:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Thebaker_: Enjoyment platter😋 10pcs samosas, 10pcs spring rolls, 10pcs meat pies 3k only 
+
+📍kaduna pickup/delivery 📞08131906583 https:/…
+2021-07-02 19:16:28 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Thebaker_: Enjoyment platter😋 10pcs samosas, 10pcs spring rolls, 10pcs meat pies 3k only 
+
+📍kaduna pickup/delivery 📞08131906583 https:/…
+2021-07-02 19:16:28 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Thebaker_: Enjoyment platter😋 10pcs samosas, 10pcs spring rolls, 10pcs meat pies 3k only 
+
+📍kaduna pickup/delivery 📞08131906583 https:/…
+2021-07-02 19:16:28 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @KaungKhantHto10: Local people from Amyint lan village near, #Monywa township prayed for  the restoration of Federal Democracy in #Myanm…
+2021-07-02 19:16:28 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Thebaker_: Enjoyment platter😋 10pcs samosas, 10pcs spring rolls, 10pcs meat pies 3k only 
+
+📍kaduna pickup/delivery 📞08131906583 https:/…
+2021-07-02 19:16:28 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @monday_mint: "Hot Spring"
+#saiino #サイいの https://t.co/jVGzORRvTY
+2021-07-02 19:16:29 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text We keep praying for everyone 🙏
+#July2Coup
+#WhatsHappeningInMyanmar https://t.co/OkAgVgMHjS
+2021-07-02 19:16:29 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @NidhiTanejaa: Fail to understand what stops boards/institutes/concerned authorities from listening to and accommodating genuine concern…
+2021-07-02 19:16:29 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @lovehuex: There are seven colours of spring wrapped in this one beauty 
+
+6 years of Sana Sayyad
+2021-07-02 19:16:30 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @monday_mint: "Hot Spring"
+#saiino #サイいの https://t.co/jVGzORRvTY
+2021-07-02 19:16:30 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #July2Coup
+#WhatsHappeningInMyanmar #MilkTeaAlliance https://t.co/RrbbA1oSqt
+2021-07-02 19:16:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @DiscussingFilm: Noah Hawley says his ‘ALIEN’ series is not a Ripley story and will instead explore “what happens when the inequality we…
+2021-07-02 19:16:31 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @VogueParis: Alexander McQueen for Givenchy Spring 1997 Couture 🌟
+
+Credit: Vogue Runway / Courtesy of Givenchy https://t.co/DkBcaT870c
+2021-07-02 19:16:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Still People!
+
+#MachineLearning #BigData #Analytics #DataScience #IoT #IIoT #PyTorch #Python #RStats #TensorFlow #Java #JavaScript #ReactJS #GoLang #CloudComputing #Serverless #DataScientist #Linux #Maths #Programming #Coding #100DaysofCode #futureofwork #selfdrivingcars #AI #CX https://t.co/lNrygH016c
+2021-07-02 19:16:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #July2Coup #MilkTeaAlliance   #WhatsHappeningInMyanmar
+2021-07-02 19:16:32 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text 👀
+2021-07-02 19:16:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @KaungKhantHto10: Mogaung , #Kachin State 
+
+Spring Revolution in the rice fields. 
+Moegaung people while planting rice they are also pro…
+2021-07-02 19:16:33 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @SoyGerardCortez: Los colores neón en los trajes Spring 2022 de Walter Van Beirendonck 😱 https://t.co/g26txiWYhv
+2021-07-02 19:16:34 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text A good box spring is just important as a good mattress that sits on top of it. Don’t put a new mattress on an old box frame. They were meant to have their companion pieces purchased together. As a matter of fact, some manufactures require the purchase of a new foundation as a...
+2021-07-02 19:16:34 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @series4e: พาหมาออกมาวิ่งเล่นยังมีคนตามถ่ายรูปให้ .. แถมโดนแม่ดุก็ยังเอามาโพสต์ไอจี(อันนี้ยิ่งงง)  .. น่าจะลองทบทวนละถามตัวเองดูบ้างเนาะ…
+2021-07-02 19:16:35 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Residents from Amyint village,Monywa prayed for the restoration of Federal Democracy in Myanmar, immediate release of all detainees and the martyrs who fell in the Spring Revolution.
+#WhatsHappeningInMyanmar 
+#July2Coup 
+#RecognizeNUG https://t.co/SyrfyxNrLp
+2021-07-02 19:16:36 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @FilmCriticMaybe: Nerds discover to their dismay that a follow up to Alien, a movie about a group of miners left to die with a murderous…
+2021-07-02 19:16:36 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text We keep praying for everyone 🙏
+#July2Coup
+#WhatsHappeningInMyanmar https://t.co/bTc3rU7HYY
+2021-07-02 19:16:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @PinakiLaskar: Still People!
+
+#MachineLearning #BigData #Analytics #DataScience #IoT #IIoT #PyTorch #Python #RStats #TensorFlow #Java #J…
+2021-07-02 19:16:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @SimonHoiberg: JavaScript Tip 💡
+
+In JavaScript, there are no classes.
+It’s syntactical sugar added to please developers from other langu…
+2021-07-02 19:16:37 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @yuyon_yuyayuyon: うむ、クリフォード・ブラウンは演奏も勿論スゴいのだが、それ以前にシンプルにテーマが良い曲が多いな。
+《Jordu》《Daahoud》《Joy Spring》いずれも名曲揃い。
+「ジャズに名曲なし」とはいっても、やっぱりテーマがしっかりし…
+2021-07-02 19:16:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @PinakiLaskar: Still People!
+
+#MachineLearning #BigData #Analytics #DataScience #IoT #IIoT #PyTorch #Python #RStats #TensorFlow #Java #J…
+2021-07-02 19:16:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text https://t.co/rFayJht5RR
+2021-07-02 19:16:38 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Network_Easy: easybranches MOSCHINO Resort Spring 2022 Milan - Fashion Channel: MOSCHINO Resort Spring 2022 Milan - Fashion Channel Vis…
+2021-07-02 19:16:39 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Which season do you like better: fall or spring? — Fall
+Istg autumn afternoons are the best times to be depressed and plus it makes you feel like you're in an indie movie 
+And cottagecore vibes idk just some extra info https://t.co/RvQXbnsF6W
+2021-07-02 19:16:39 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #July2Coup
+#WhatsHappeningInMyanmar #MilkTeaAlliance https://t.co/kyao7rtRXy
+2021-07-02 19:16:39 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @HopingDaily: [2021 Global ARMY Song OFFICIAL RELEASE : Teaser 1 ✨📣] 
+
+“Even in the waiting,this winter slowly awakens spring. Perhaps i…
+2021-07-02 19:16:39 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @PinakiLaskar: Still People!
+
+#MachineLearning #BigData #Analytics #DataScience #IoT #IIoT #PyTorch #Python #RStats #TensorFlow #Java #J…
+2021-07-02 19:16:39 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Residents from Amyint village,Monywa prayed for the restoration of Federal Democracy in Myanmar, immediate release of all detainees and the martyrs who fell in the Spring Revolution. #WhatsHappeningInMyanmar  #July2Coup  #RecognizeNUG https://t.co/RVGyhmd96T
+2021-07-02 19:16:40 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @PinakiLaskar: Still People!
+
+#MachineLearning #BigData #Analytics #DataScience #IoT #IIoT #PyTorch #Python #RStats #TensorFlow #Java #J…
+2021-07-02 19:16:41 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @darkmagic_swh: Another shop promo post since my sales are always really low in Spring/Summer & cons are slime this year. Help me out if…
+2021-07-02 19:16:41 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @NidhiTanejaa: Fail to understand what stops boards/institutes/concerned authorities from listening to and accommodating genuine concern…
+2021-07-02 19:16:42 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text “there is no way that they would really  cancel spring” 
+
+#2021GlobalARMYSong #W8iscoming
+2021-07-02 19:16:42 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text i know the racist baylor people will be up in arms about this and when they get vandalized it's gonna be tragic and so unsurprising.
+2021-07-02 19:16:42 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Residents from Amyint village,Monywa prayed for the restoration of Federal Democracy in Myanmar, immediate release of all detainees and the martyrs who fell in the Spring Revolution. #WhatsHappeningInMyanmar  #July2Coup  #RecognizeNUG https://t.co/DTMIumSsjx
+2021-07-02 19:16:43 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text We keep praying for everyone 🙏
+#July2Coup
+#WhatsHappeningInMyanmar https://t.co/pX5awNohZR
+2021-07-02 19:16:44 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ENHYPENThailand: [🎥IG @wkorea] 210702
+
+#ENHYPEN x #AmiParis
+
+Ami 2022 Spring/Summer Men’s and Women’s Collection จะเปิดตัวพรุ่งนี้เวลา…
+2021-07-02 19:16:45 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Aungpya89593804: Residents from Amyint village,Monywa prayed for the restoration of Federal Democracy in Myanmar, immediate release of…
+2021-07-02 19:16:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Just posted a photo @ Spring Lake, New Jersey https://t.co/8Im5lwq4Hh
+2021-07-02 19:16:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Residents from Amyint village,Monywa prayed for the restoration of Federal Democracy in Myanmar, immediate release of all detainees and the martyrs who fell in the Spring Revolution. 
+#WhatsHappeningInMyanmar  
+#July2Coup  
+#RecognizeNUG https://t.co/3i16WGLq18
+2021-07-02 19:16:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @2021Revtweets: Residents from Amyint village,Monywa prayed for the restoration of Federal Democracy in Myanmar, immediate release of al…
+2021-07-02 19:16:47 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Bhaal_Spawn: If you'd like a lol, check out the people outraged that the Alien series is going to explore the results of unfettered cor…
+2021-07-02 19:16:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Bruh I wanna find  either a few ppl or just me and one other to make a java sever and grinnndddd cuz I miss grind mc like hard core think no one in fg like it so:(
+2021-07-02 19:16:48 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @PopBase She's giving Spring Breakers in these photos
+2021-07-02 19:16:49 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Which season do you like better: fall or spring? — Fall, everything feels nostalgic and cozy in the fall. 
+
+I hope to experience it one day. https://t.co/EYaS2qP8KM

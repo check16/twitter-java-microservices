@@ -1,0 +1,24 @@
+2021-07-01 18:38:55 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.5 on MacBook-Pro-de-Antonio.local with PID 56711 (/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by antoniosanchez in /Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo)
+2021-07-01 18:38:55 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-07-01 18:38:56 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 7.212 seconds (JVM running for 9.081)
+2021-07-01 18:38:56 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+2021-07-01 18:38:56 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Application starts...
+2021-07-01 18:38:56 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2021-07-01 18:38:56 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - null
+2021-07-01 18:38:56 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-07-01 18:39:45 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.5 on MacBook-Pro-de-Antonio.local with PID 56730 (/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by antoniosanchez in /Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo)
+2021-07-01 18:39:45 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-07-01 18:39:46 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 6.454 seconds (JVM running for 7.757)
+2021-07-01 18:39:46 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+2021-07-01 18:39:46 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Application starts...
+2021-07-01 18:39:46 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2021-07-01 18:39:46 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - null
+2021-07-01 18:39:46 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-07-01 18:41:09 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.5 on MacBook-Pro-de-Antonio.local with PID 56753 (/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/twitter-to-kafka-service/target/classes started by antoniosanchez in /Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo)
+2021-07-01 18:41:09 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-07-01 18:41:10 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 6.96 seconds (JVM running for 8.321)
+2021-07-01 18:41:10 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+2021-07-01 18:41:10 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Application starts...
+2021-07-01 18:41:10 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2021-07-01 18:41:10 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello microservices
+2021-07-01 18:41:10 [main] INFO  o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
