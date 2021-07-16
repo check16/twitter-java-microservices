@@ -10,12 +10,11 @@ import java.util.List;
 @Configuration
 @ConfigurationProperties(prefix = "kafka-config")
 public class KafkaConfigData {
-    private String bootstrapServers;
+    private String bootstrapService;
     private String schemaRegistryUrlKey;
     private String schemaRegistryUrl;
     private String topicName;
     private List<String> topicsNameToCreate;
     private Integer numberOfPartitions;
     private Short replicationFactor;
-
 }
