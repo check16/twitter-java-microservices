@@ -5,6 +5,13 @@ spring:
     config:
       server:
         git:
-          uri: file://Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/config-server-repository
+          uri: https://github.com/check16/spring-cloud-config-server-repository
+          default-label: main
+          username: check16
+          password: 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
           clone-on-start: true
     fail-fast: true
+  security:
+    user:
+      name: spring_cloud_user
+      password: springCloud_Pwd!
