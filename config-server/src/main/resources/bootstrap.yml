@@ -8,7 +8,7 @@ spring:
           uri: https://github.com/check16/spring-cloud-config-server-repository
           default-label: main
           username: check16
-          password: "{cipher}1c7e387ba0bdbc8c027b21515a85adadeae03dea9ef668116ae9039dc9223b86dc731910f63fc63be3f2bbe489f8f25f44bbd83e841e959f61d3c45b7fe5334a"
+          password: '{cipher}1c7e387ba0bdbc8c027b21515a85adadeae03dea9ef668116ae9039dc9223b86dc731910f63fc63be3f2bbe489f8f25f44bbd83e841e959f61d3c45b7fe5334a'
           clone-on-start: true
     fail-fast: true
   security:

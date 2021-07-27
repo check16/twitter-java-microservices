@@ -3675,3 +3675,9 @@ Unconditional classes:
 2021-07-27 16:40:25 [Catalina-utility-1] DEBUG o.a.catalina.session.ManagerBase - End expire sessions StandardManager processingTime 4 expired sessions: 0
 2021-07-27 16:41:24 [Catalina-utility-1] DEBUG o.a.catalina.session.ManagerBase - Start expire sessions StandardManager at 1627404084993 sessioncount 1
 2021-07-27 16:41:25 [Catalina-utility-1] DEBUG o.a.catalina.session.ManagerBase - End expire sessions StandardManager processingTime 6 expired sessions: 0
+2021-07-27 16:42:24 [Catalina-utility-2] DEBUG o.a.catalina.session.ManagerBase - Start expire sessions StandardManager at 1627404144946 sessioncount 1
+2021-07-27 16:42:24 [Catalina-utility-2] DEBUG o.a.catalina.session.ManagerBase - End expire sessions StandardManager processingTime 7 expired sessions: 0
+2021-07-27 16:43:24 [Catalina-utility-2] DEBUG o.a.catalina.session.ManagerBase - Start expire sessions StandardManager at 1627404204899 sessioncount 1
+2021-07-27 16:43:24 [Catalina-utility-2] DEBUG o.a.catalina.session.ManagerBase - End expire sessions StandardManager processingTime 3 expired sessions: 0
+2021-07-27 16:44:24 [Catalina-utility-1] DEBUG o.a.catalina.session.ManagerBase - Start expire sessions StandardManager at 1627404264843 sessioncount 1
+2021-07-27 16:44:24 [Catalina-utility-1] DEBUG o.a.catalina.session.ManagerBase - End expire sessions StandardManager processingTime 6 expired sessions: 0
