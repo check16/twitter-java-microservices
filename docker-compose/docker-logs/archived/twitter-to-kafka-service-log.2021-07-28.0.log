@@ -1,0 +1,366 @@
+2021-07-28 15:42:35 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://config-server:8888
+2021-07-28 15:42:40 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=twitter-to-kafka-service, config-client, profiles=[twitter_to_kafka], label=null, version=4c278b8d6bc82b7c2cf37b3c2c6c72e80ff79a73, state=null
+2021-07-28 15:42:40 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/check16/spring-cloud-config-server-repository/config-client-twitter_to_kafka.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/check16/spring-cloud-config-server-repository/config-client.yml'}]
+2021-07-28 15:42:40 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - The following profiles are active: twitter_to_kafka
+2021-07-28 15:42:43 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=8d733125-f015-3148-921a-c718f2872370
+2021-07-28 15:42:43 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$901e1422] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-28 15:42:44 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-07-28 15:42:44 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-07-28 15:42:44 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-07-28 15:42:44 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1627486964573
+2021-07-28 15:42:46 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 33bd31cc-7e7e-4c80-b2bb-711ec681b7b8
+
+2021-07-28 15:42:47 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8080
+2021-07-28 15:42:47 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 16.214 seconds (JVM running for 19.524)
+2021-07-28 15:42:47 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Application starts...
+2021-07-28 15:42:47 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Creating 1 topic(s) attemp 0
+2021-07-28 15:42:47 [main] INFO  c.m.d.k.a.client.KafkaAdminClient - Reading kafka topic [twitter-topic] topic(s) attemp 0
+2021-07-28 15:42:50 [main] INFO  c.m.d.t.t.k.s.i.i.KafkaStreamInitializer - Topic with name twitter-topic is ready for operations!
+2021-07-28 15:42:50 [main] INFO  c.m.d.t.t.k.s.r.i.TwitterKafkaStreamRunner - Starting filtering twitter stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2021-07-28 15:42:50 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2021-07-28 15:42:52 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Connection established.
+2021-07-28 15:42:52 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - Receiving status stream.
+2021-07-28 15:42:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @yoonmin_11 Spring day &mic drop sending to Kafka topic twitter-topic
+2021-07-28 15:42:52 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1404113542026956808, "id": 1420409408299831305, "text": "@yoonmin_11 Spring day &mic drop", "createdAt": 1627486967000}' to topic='twitter-topic'
+2021-07-28 15:42:52 [Twitter4J Async Dispatcher[0]] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	batch.size = 1638400
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2021-07-28 15:42:53 [Twitter4J Async Dispatcher[0]] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://schema-registry:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2021-07-28 15:42:53 [Twitter4J Async Dispatcher[0]] WARN  o.a.k.c.producer.ProducerConfig - The configuration 'internal.auto.downgrade.txn.commit' was supplied but isn't a known config.
+2021-07-28 15:42:53 [Twitter4J Async Dispatcher[0]] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-07-28 15:42:53 [Twitter4J Async Dispatcher[0]] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-07-28 15:42:53 [Twitter4J Async Dispatcher[0]] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1627486973296
+2021-07-28 15:42:53 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: XzsyzUxvT32MkOeVUTwh4g
+2021-07-28 15:42:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @TheJennyJett: 6/9 fell on a humpday. Nice. https://t.co/jOBPoId03I
+
+#wetwednesday #humpday #splash #datass #peach #booty #summer #vibes? sending to Kafka topic twitter-topic
+2021-07-28 15:42:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 3020328916, "id": 1420409410292178948, "text": "RT @TheJennyJett: 6/9 fell on a humpday. Nice. https://t.co/jOBPoId03I\n\n#wetwednesday #humpday #splash #datass #peach #booty #summer #vibes\u2026", "createdAt": 1627486968000}' to topic='twitter-topic'
+2021-07-28 15:42:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @IlhanMN: If we believe in democracy and human rights, we should be loudly decrying the current assault on democracy in Tunisia?the hear? sending to Kafka topic twitter-topic
+2021-07-28 15:42:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 935462598, "id": 1420409410602610695, "text": "RT @IlhanMN: If we believe in democracy and human rights, we should be loudly decrying the current assault on democracy in Tunisia\u2014the hear\u2026", "createdAt": 1627486968000}' to topic='twitter-topic'
+2021-07-28 15:42:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @xo_chl0e_: Trading:
+1x 25$ Roblox Gift Card
+1x 50$ Roblox Gift Card
+1x 30$ Roblox Gift Card
+1x 10$ Roblox Gift Card
+For Royale High Hal? sending to Kafka topic twitter-topic
+2021-07-28 15:42:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1374573376522444804, "id": 1420409411630080002, "text": "RT @xo_chl0e_: Trading:\n1x 25$ Roblox Gift Card\n1x 50$ Roblox Gift Card\n1x 30$ Roblox Gift Card\n1x 10$ Roblox Gift Card\nFor Royale High Hal\u2026", "createdAt": 1627486968000}' to topic='twitter-topic'
+2021-07-28 15:42:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Footage of protesters marching to commemorate the martyrdom of 4 martyrs who were killed on February 28 during SPRING REVOLUTION in Dawei.
+MYANMAR BEGS FOR OXYGEN          #WhatsHappeningInMyanmar #July28Coup https://t.co/y2J8SQU1dO sending to Kafka topic twitter-topic
+2021-07-28 15:42:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1380577464779468802, "id": 1420409412297035783, "text": "Footage of protesters marching to commemorate the martyrdom of 4 martyrs who were killed on February 28 during SPRING REVOLUTION in Dawei.\nMYANMAR BEGS FOR OXYGEN          #WhatsHappeningInMyanmar #July28Coup https://t.co/y2J8SQU1dO", "createdAt": 1627486968000}' to topic='twitter-topic'
+2021-07-28 15:42:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Pro-democracy residents in Nyin Maw village staged a prayer strike, paying tribute to the four martyrs who fell in spring Revolution.   MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/dIjWqWAkSi sending to Kafka topic twitter-topic
+2021-07-28 15:42:54 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1356213636499337216, "id": 1420409412297003018, "text": "Pro-democracy residents in Nyin Maw village staged a prayer strike, paying tribute to the four martyrs who fell in spring Revolution.   MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/dIjWqWAkSi", "createdAt": 1627486968000}' to topic='twitter-topic'
+2021-07-28 15:42:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @TracyBethHoeg: This is worth retweeting since many are discussing masks and schools. British Columbia (BC, green) kept schools open all? sending to Kafka topic twitter-topic
+2021-07-28 15:42:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 844777764670529536, "id": 1420409414452842503, "text": "RT @TracyBethHoeg: This is worth retweeting since many are discussing masks and schools. British Columbia (BC, green) kept schools open all\u2026", "createdAt": 1627486968000}' to topic='twitter-topic'
+2021-07-28 15:42:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AggroCrabGames: Kafka's Metamorphosis, the good ending https://t.co/QHAcdDwSQo sending to Kafka topic twitter-topic
+2021-07-28 15:42:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 706687726691549185, "id": 1420409419804839943, "text": "RT @AggroCrabGames: Kafka's Metamorphosis, the good ending https://t.co/QHAcdDwSQo", "createdAt": 1627486970000}' to topic='twitter-topic'
+2021-07-28 15:42:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text "Continue Fighting with the Spirit of the Heroes".
+Dawei's Main Strike and Students Strike laid wreath and salute the Spring Revolution Heroes  who died on February 28 and staged  bloody red movement today.
+#July28Coup 
+#WhatsHappeningInMyanmar https://t.co/vV96gnLJpt sending to Kafka topic twitter-topic
+2021-07-28 15:42:55 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1357183731853742082, "id": 1420409420228538374, "text": "\"Continue Fighting with the Spirit of the Heroes\".\nDawei's Main Strike and Students Strike laid wreath and salute the Spring Revolution Heroes  who died on February 28 and staged  bloody red movement today.\n#July28Coup \n#WhatsHappeningInMyanmar https://t.co/vV96gnLJpt", "createdAt": 1627486970000}' to topic='twitter-topic'
+2021-07-28 15:42:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text hope our children walk by spring, when flowers bloom sending to Kafka topic twitter-topic
+2021-07-28 15:42:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1129470883482021888, "id": 1420409422782808064, "text": "hope our children walk by spring, when flowers bloom", "createdAt": 1627486970000}' to topic='twitter-topic'
+2021-07-28 15:42:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Talonfluff @TheRoyalGryphon I feel like spring doesnt really exist but I still like the fall season best sending to Kafka topic twitter-topic
+2021-07-28 15:42:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 994580922803544064, "id": 1420409423000911874, "text": "@Talonfluff @TheRoyalGryphon I feel like spring doesnt really exist but I still like the fall season best", "createdAt": 1627486971000}' to topic='twitter-topic'
+2021-07-28 15:42:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @JoeBuscaglia: #Bills HC Sean McDermott said RB Devin Singletary has "been intentional on working on his weaknesses" this offseason, and? sending to Kafka topic twitter-topic
+2021-07-28 15:42:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 523753834, "id": 1420409425026764807, "text": "RT @JoeBuscaglia: #Bills HC Sean McDermott said RB Devin Singletary has \"been intentional on working on his weaknesses\" this offseason, and\u2026", "createdAt": 1627486971000}' to topic='twitter-topic'
+2021-07-28 15:42:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @NAMT1DD1ESS: spring day gonna win because armys don?t know how to let things go #BTSVZBTS sending to Kafka topic twitter-topic
+2021-07-28 15:42:56 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1287386205911429120, "id": 1420409425395920900, "text": "RT @NAMT1DD1ESS: spring day gonna win because armys don\u2019t know how to let things go #BTSVZBTS", "createdAt": 1627486971000}' to topic='twitter-topic'
+2021-07-28 15:42:57 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text < indication, I?d say that I?ve gotten even ?????? at this kinda shit, courtesy of my wolfy upgrade. Derek taught me to use it to my advantage to jump properly when we were playing basketball together. I highly doubt he knew I?d end up using that whole literal spring in > sending to Kafka topic twitter-topic
+2021-07-28 15:42:57 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1151886424930754560, "id": 1420409429506265088, "text": "< indication, I\u2019d say that I\u2019ve gotten even ?????? at this kinda shit, courtesy of my wolfy upgrade. Derek taught me to use it to my advantage to jump properly when we were playing basketball together. I highly doubt he knew I\u2019d end up using that whole literal spring in >", "createdAt": 1627486972000}' to topic='twitter-topic'
+2021-07-28 15:42:59 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ??? ????????
+Ratings
+210727 
+
+You Are My Spring? 2%
+
+#YouAreMySpring  #ratings #kdramaratings https://t.co/FCEmzJ99SL sending to Kafka topic twitter-topic
+2021-07-28 15:42:59 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1411405625276485634, "id": 1420409435026034695, "text": "??? ????????\nRatings\n210727 \n\nYou Are My Spring? 2%\n\n#YouAreMySpring  #ratings #kdramaratings https://t.co/FCEmzJ99SL", "createdAt": 1627486973000}' to topic='twitter-topic'
+2021-07-28 15:43:00 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @btsyoutubedata: .@BTS_twt 'Spring Day' MV has surpassed 430M views on YouTube sending to Kafka topic twitter-topic
+2021-07-28 15:43:00 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1417764201074933760, "id": 1420409439526522885, "text": "RT @btsyoutubedata: .@BTS_twt 'Spring Day' MV has surpassed 430M views on YouTube", "createdAt": 1627486974000}' to topic='twitter-topic'
+2021-07-28 15:43:00 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Residents from a village in  Dawei, marched and  laid wreaths to mark the 5th month of mourning ceremony for matyrs of Dawei who had fallen during spring revolution.  MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/WymUPQvKgL sending to Kafka topic twitter-topic
+2021-07-28 15:43:00 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1360076508539219972, "id": 1420409440768077827, "text": "Residents from a village in  Dawei, marched and  laid wreaths to mark the 5th month of mourning ceremony for matyrs of Dawei who had fallen during spring revolution.  MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/WymUPQvKgL", "createdAt": 1627486975000}' to topic='twitter-topic'
+2021-07-28 15:43:00 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Sarah_Katilyn I love the spring, getting to begin planting and working in the garden. sending to Kafka topic twitter-topic
+2021-07-28 15:43:00 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1362189997064024064, "id": 1420409441883725829, "text": "@Sarah_Katilyn I love the spring, getting to begin planting and working in the garden.", "createdAt": 1627486975000}' to topic='twitter-topic'
+2021-07-28 15:43:00 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @UFWertheim Posted... 
+https://t.co/Dg0cpkx7Mc sending to Kafka topic twitter-topic
+2021-07-28 15:43:00 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 376989452, "id": 1420409442684788738, "text": "@UFWertheim Posted... \nhttps://t.co/Dg0cpkx7Mc", "createdAt": 1627486975000}' to topic='twitter-topic'
+2021-07-28 15:43:00 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @_iconicLuna: ??? ?: ? Spring Halo 2021 giveaway!!
+
+       ?? RULES: ?? 
+? ???Follow me and @Arixilla
+? ???Like and Retweet
+
+   ? GOODLU? sending to Kafka topic twitter-topic
+2021-07-28 15:43:00 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1411332507723649028, "id": 1420409443234193414, "text": "RT @_iconicLuna: \u2027?? ?: ? Spring Halo 2021 giveaway!!\n\n       ?? RULES: ?? \n\u205E ???Follow me and @Arixilla\n\u205E ???Like and Retweet\n\n   ? GOODLU\u2026", "createdAt": 1627486975000}' to topic='twitter-topic'
+2021-07-28 15:43:01 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @b3rry_y: A prayer strike was held by residents in Nyin Maw, Longlone to pay tribute to four fallen heroes in Spring Revolution.
+
+MYANMA? sending to Kafka topic twitter-topic
+2021-07-28 15:43:02 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 628581308, "id": 1420409444433866755, "text": "RT @b3rry_y: A prayer strike was held by residents in Nyin Maw, Longlone to pay tribute to four fallen heroes in Spring Revolution.\n\nMYANMA\u2026", "createdAt": 1627486976000}' to topic='twitter-topic'
+2021-07-28 15:43:02 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text MYANMAR BEGS FOR OXYGEN
+#WhatsHappeningInMyanmar
+#July28Coup
+https://t.co/W6xuVpXbtY sending to Kafka topic twitter-topic
+2021-07-28 15:43:02 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1357590333987594241, "id": 1420409445989847042, "text": "MYANMAR BEGS FOR OXYGEN\n#WhatsHappeningInMyanmar\n#July28Coup\nhttps://t.co/W6xuVpXbtY", "createdAt": 1627486976000}' to topic='twitter-topic'
+2021-07-28 15:43:03 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Cardiff Uni Optometry Class 13-16 Annual Dinner. 
+
+Spring 2016, Cardiff City Hall. https://t.co/eLFu1txpdU sending to Kafka topic twitter-topic
+2021-07-28 15:43:03 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 765194212153241600, "id": 1420409450209320966, "text": "Cardiff Uni Optometry Class 13-16 Annual Dinner. \n\nSpring 2016, Cardiff City Hall. https://t.co/eLFu1txpdU", "createdAt": 1627486977000}' to topic='twitter-topic'
+2021-07-28 15:43:03 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @wnrstweets: ok ny local besties we have a mission? go to 135 Spring St, New York, NY 10012 ?. ask for we?re not really strangers when y? sending to Kafka topic twitter-topic
+2021-07-28 15:43:03 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1132238671627743232, "id": 1420409450662297600, "text": "RT @wnrstweets: ok ny local besties we have a mission\u2026 go to 135 Spring St, New York, NY 10012 \u2026. ask for we\u2019re not really strangers when y\u2026", "createdAt": 1627486977000}' to topic='twitter-topic'
+2021-07-28 15:43:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @ReaderyHQ: ??????????????
+???????????
+??????????????????
+
+?Haruki Murakami, Kafka on the Shore
+
+???????????????????????? Butterfly ???? sending to Kafka topic twitter-topic
+2021-07-28 15:43:05 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 323811437, "id": 1420409459663278083, "text": "RT @ReaderyHQ: \u201C?????????????\n???????????\n?????????????????\u201D\n\n\u2014Haruki Murakami, Kafka on the Shore\n\n???????????????????????? Butterfly ???\u2026", "createdAt": 1627486979000}' to topic='twitter-topic'
+2021-07-28 15:43:06 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #July28Coup 
+#WhatsHappeningInMyanmar https://t.co/S2GWwdKX3V sending to Kafka topic twitter-topic
+2021-07-28 15:43:06 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1356531356679897089, "id": 1420409464331542528, "text": "#July28Coup \n#WhatsHappeningInMyanmar https://t.co/S2GWwdKX3V", "createdAt": 1627486980000}' to topic='twitter-topic'
+2021-07-28 15:43:06 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @klsd93060811: Patreon Rewards ! ???
+? Heinrich -Spring ??
+?????????
+---------
+Gumroad:https://t.co/6rCwgNbDNl https://t.co/6ZnjQP6lUF sending to Kafka topic twitter-topic
+2021-07-28 15:43:06 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 905107663813353472, "id": 1420409465015209987, "text": "RT @klsd93060811: Patreon Rewards ! ???\n? Heinrich -Spring ??\n\u203B????????\n---------\nGumroad:https://t.co/6rCwgNbDNl https://t.co/6ZnjQP6lUF", "createdAt": 1627486981000}' to topic='twitter-topic'
+2021-07-28 15:43:06 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @Pastabiliti I was hoping Hannible would just wait until spring and then the ice Sempronius was standing on would melt and they'd all fall into the river and get wet. sending to Kafka topic twitter-topic
+2021-07-28 15:43:06 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 879750610794536960, "id": 1420409465862492163, "text": "@Pastabiliti I was hoping Hannible would just wait until spring and then the ice Sempronius was standing on would melt and they'd all fall into the river and get wet.", "createdAt": 1627486981000}' to topic='twitter-topic'
+2021-07-28 15:43:06 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text "Continue Fighting with the Spirit of the Heroes".
+Dawei's Main Strike and Students Strike laid wreath and salute the Spring Revolution Heroes  who died on February 28 and staged  bloody red movement today.
+#July28Coup 
+#WhatsHappeningInMyanmar https://t.co/LzQ2iQpLEL sending to Kafka topic twitter-topic
+2021-07-28 15:43:06 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1356531356679897089, "id": 1420409467351359488, "text": "\"Continue Fighting with the Spirit of the Heroes\".\nDawei's Main Strike and Students Strike laid wreath and salute the Spring Revolution Heroes  who died on February 28 and staged  bloody red movement today.\n#July28Coup \n#WhatsHappeningInMyanmar https://t.co/LzQ2iQpLEL", "createdAt": 1627486981000}' to topic='twitter-topic'
+2021-07-28 15:43:08 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text "Continue Fighting with the Spirit of the HEROES"
+MYANMAR BEGS FOR OXYGEN
+#July28Coup 
+#WhatsHappeningInMyanmar https://t.co/9ucZodb7Px sending to Kafka topic twitter-topic
+2021-07-28 15:43:08 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1356514313163350017, "id": 1420409474913763330, "text": "\"Continue Fighting with the Spirit of the HEROES\"\nMYANMAR BEGS FOR OXYGEN\n#July28Coup \n#WhatsHappeningInMyanmar https://t.co/9ucZodb7Px", "createdAt": 1627486983000}' to topic='twitter-topic'
+2021-07-28 15:43:09 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @BrianGraham624 @Hegotbored Spring of 2006 I believe sending to Kafka topic twitter-topic
+2021-07-28 15:43:09 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1647979790, "id": 1420409480538476545, "text": "@BrianGraham624 @Hegotbored Spring of 2006 I believe", "createdAt": 1627486984000}' to topic='twitter-topic'
+2021-07-28 15:43:09 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @chitpyaepyaeh: A prayer strike was held by residents in Nyin Maw, Longlone to pay tribute to four fallen heroes in Spring Revolution.? sending to Kafka topic twitter-topic
+2021-07-28 15:43:09 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1351825761116721161, "id": 1420409480748183553, "text": "RT @chitpyaepyaeh: A prayer strike was held by residents in Nyin Maw, Longlone to pay tribute to four fallen heroes in Spring Revolution.\u2026", "createdAt": 1627486984000}' to topic='twitter-topic'
+2021-07-28 15:43:10 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AggroCrabGames: Kafka's Metamorphosis, the good ending https://t.co/QHAcdDwSQo sending to Kafka topic twitter-topic
+2021-07-28 15:43:10 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 610911991, "id": 1420409484401250304, "text": "RT @AggroCrabGames: Kafka's Metamorphosis, the good ending https://t.co/QHAcdDwSQo", "createdAt": 1627486985000}' to topic='twitter-topic'
+2021-07-28 15:43:11 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Buddhist Monks in Myanmar sent prayers for the immediate restoration of democracy and for the fallen heroes of Spring Revolution today.       MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/LGkIs5OqL0 sending to Kafka topic twitter-topic
+2021-07-28 15:43:11 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1356213636499337216, "id": 1420409487849000963, "text": "Buddhist Monks in Myanmar sent prayers for the immediate restoration of democracy and for the fallen heroes of Spring Revolution today.       MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/LGkIs5OqL0", "createdAt": 1627486986000}' to topic='twitter-topic'
+2021-07-28 15:43:12 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text MYANMAR BEGS FOR OXYGEN 
+#WhatsHappeningInMyanmar #July28Coup sending to Kafka topic twitter-topic
+2021-07-28 15:43:12 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1356248096263397377, "id": 1420409493477863431, "text": "MYANMAR BEGS FOR OXYGEN \n#WhatsHappeningInMyanmar #July28Coup", "createdAt": 1627486987000}' to topic='twitter-topic'
+2021-07-28 15:43:13 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Pro-democracy protesters from Dawei, laid wreaths to mark the 5th month of mourning ceremony for 4 matyrs of Dawei who had fallen during spring revolution.  MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/wbpmK8mWEN sending to Kafka topic twitter-topic
+2021-07-28 15:43:13 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1356965576178982913, "id": 1420409493624549377, "text": "Pro-democracy protesters from Dawei, laid wreaths to mark the 5th month of mourning ceremony for 4 matyrs of Dawei who had fallen during spring revolution.  MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/wbpmK8mWEN", "createdAt": 1627486987000}' to topic='twitter-topic'
+2021-07-28 15:43:13 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AggroCrabGames: Kafka's Metamorphosis, the good ending https://t.co/QHAcdDwSQo sending to Kafka topic twitter-topic
+2021-07-28 15:43:13 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 110789746, "id": 1420409493884706816, "text": "RT @AggroCrabGames: Kafka's Metamorphosis, the good ending https://t.co/QHAcdDwSQo", "createdAt": 1627486987000}' to topic='twitter-topic'
+2021-07-28 15:43:14 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text "Continue Fighting with the Spirit of the HEROES"
+MYANMAR BEGS FOR OXYGEN
+#July28Coup 
+#WhatsHappeningInMyanmar https://t.co/PxrVrhZNqY sending to Kafka topic twitter-topic
+2021-07-28 15:43:14 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1254344434914717696, "id": 1420409500255674372, "text": "\"Continue Fighting with the Spirit of the HEROES\"\nMYANMAR BEGS FOR OXYGEN\n#July28Coup \n#WhatsHappeningInMyanmar https://t.co/PxrVrhZNqY", "createdAt": 1627486989000}' to topic='twitter-topic'
+2021-07-28 15:43:14 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Artanejp: ??12?????????????????????????????????Colabo???????Spring?NPO??????????NPO???????????????????????????????NPO??????????????SACH? sending to Kafka topic twitter-topic
+2021-07-28 15:43:14 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 95480925, "id": 1420409501207859204, "text": "RT @Artanejp: \u201D\u203B12?????????????????????????????????Colabo???????Spring?NPO??????????NPO???????????????????????????????NPO??????????????SACH\u2026", "createdAt": 1627486989000}' to topic='twitter-topic'
+2021-07-28 15:43:14 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text A prayer strike was held by residents in Nyin Maw, Longlone to pay tribute to four fallen heroes in Spring Revolution.
+
+MYANMAR BEGS FOR OXYGEN
+#WhatsHappeningInMyanmar
+#July28Coup https://t.co/Zb7whd3eqc sending to Kafka topic twitter-topic
+2021-07-28 15:43:14 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1356596963437805570, "id": 1420409501279166465, "text": "A prayer strike was held by residents in Nyin Maw, Longlone to pay tribute to four fallen heroes in Spring Revolution.\n\nMYANMAR BEGS FOR OXYGEN\n#WhatsHappeningInMyanmar\n#July28Coup https://t.co/Zb7whd3eqc", "createdAt": 1627486989000}' to topic='twitter-topic'
+2021-07-28 15:43:15 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text #Spring Revolution Daily News
+
+MYANMAR BEGS FOR OXYGEN 
+#WhatsHappeningInMyanmar #July28Coup #CrimesAgainstHumanity https://t.co/miJw6vKIQw sending to Kafka topic twitter-topic
+2021-07-28 15:43:15 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1356978203575738368, "id": 1420409502583517185, "text": "#Spring Revolution Daily News\n\nMYANMAR BEGS FOR OXYGEN \n#WhatsHappeningInMyanmar #July28Coup #CrimesAgainstHumanity https://t.co/miJw6vKIQw", "createdAt": 1627486990000}' to topic='twitter-topic'
+2021-07-28 15:43:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text "Continue Fighting with the Spirit of the HEROES"
+MYANMAR BEGS FOR OXYGEN
+#July28Coup 
+#WhatsHappeningInMyanmar https://t.co/wif8RLvKK4 sending to Kafka topic twitter-topic
+2021-07-28 15:43:16 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1356864823271727104, "id": 1420409506786381824, "text": "\"Continue Fighting with the Spirit of the HEROES\"\nMYANMAR BEGS FOR OXYGEN\n#July28Coup \n#WhatsHappeningInMyanmar https://t.co/wif8RLvKK4", "createdAt": 1627486991000}' to topic='twitter-topic'
+2021-07-28 15:43:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @coochanel: valentino spring 2007 rtw https://t.co/fbUWtANxaS sending to Kafka topic twitter-topic
+2021-07-28 15:43:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 187061332, "id": 1420409508879167490, "text": "RT @coochanel: valentino spring 2007 rtw https://t.co/fbUWtANxaS", "createdAt": 1627486991000}' to topic='twitter-topic'
+2021-07-28 15:43:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Pro-democracy protesters from Dawei, laid wreaths to mark the 5th month of mourning ceremony for 4 matyrs of Dawei who had fallen during spring revolution.  MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/sikszWZnT1 sending to Kafka topic twitter-topic
+2021-07-28 15:43:17 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1356953870430212104, "id": 1420409510800281611, "text": "Pro-democracy protesters from Dawei, laid wreaths to mark the 5th month of mourning ceremony for 4 matyrs of Dawei who had fallen during spring revolution.  MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/sikszWZnT1", "createdAt": 1627486991000}' to topic='twitter-topic'
+2021-07-28 15:43:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @klsd93060811: Patreon Rewards ! ???
+? Heinrich -Spring ??
+?????????
+---------
+Gumroad:https://t.co/6rCwgNbDNl https://t.co/6ZnjQP6lUF sending to Kafka topic twitter-topic
+2021-07-28 15:43:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 749843875561283590, "id": 1420409515028017168, "text": "RT @klsd93060811: Patreon Rewards ! ???\n? Heinrich -Spring ??\n\u203B????????\n---------\nGumroad:https://t.co/6rCwgNbDNl https://t.co/6ZnjQP6lUF", "createdAt": 1627486992000}' to topic='twitter-topic'
+2021-07-28 15:43:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Interested in an MSW Fall/Spring practicum opportunity that exposes you to the world of philanthropy and also pays? Check out Marillac Mission Fund and contact Michele.Mosley@mmfstl.org to learn more! sending to Kafka topic twitter-topic
+2021-07-28 15:43:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 3298131530, "id": 1420409515346997248, "text": "Interested in an MSW Fall/Spring practicum opportunity that exposes you to the world of philanthropy and also pays? Check out Marillac Mission Fund and contact Michele.Mosley@mmfstl.org to learn more!", "createdAt": 1627486993000}' to topic='twitter-topic'
+2021-07-28 15:43:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AggroCrabGames: Kafka's Metamorphosis, the good ending https://t.co/QHAcdDwSQo sending to Kafka topic twitter-topic
+2021-07-28 15:43:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 869822550129487872, "id": 1420409515544129541, "text": "RT @AggroCrabGames: Kafka's Metamorphosis, the good ending https://t.co/QHAcdDwSQo", "createdAt": 1627486993000}' to topic='twitter-topic'
+2021-07-28 15:43:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @_axtone: La ?nica relaci?n t?xica que acepto en mi vida hasta el momento es con #Java ?? sending to Kafka topic twitter-topic
+2021-07-28 15:43:18 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 981371075610185728, "id": 1420409515678261248, "text": "RT @_axtone: La ?nica relaci?n t?xica que acepto en mi vida hasta el momento es con #Java ??", "createdAt": 1627486993000}' to topic='twitter-topic'
+2021-07-28 15:43:19 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @georgyuka: Three #Books to Teach You #DataScience. #BigData #Analytics #DataScience #AI #MachineLearning #IoT #IIoT #Python #RStats #Te? sending to Kafka topic twitter-topic
+2021-07-28 15:43:19 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1288754505211883521, "id": 1420409519813894153, "text": "RT @georgyuka: Three #Books to Teach You #DataScience. #BigData #Analytics #DataScience #AI #MachineLearning #IoT #IIoT #Python #RStats #Te\u2026", "createdAt": 1627486994000}' to topic='twitter-topic'
+2021-07-28 15:43:19 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @aktsceyda: ?imdi baz? ?eyleri
+Suskunlukla ge?i?tirece?im.
+|Franz Kafka https://t.co/n2oRhmB0Xv sending to Kafka topic twitter-topic
+2021-07-28 15:43:19 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1313478775011762195, "id": 1420409520082329600, "text": "RT @aktsceyda: ?imdi baz? ?eyleri\nSuskunlukla ge?i?tirece?im.\n|Franz Kafka https://t.co/n2oRhmB0Xv", "createdAt": 1627486994000}' to topic='twitter-topic'
+2021-07-28 15:43:19 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @RacCreates: "The summer of life she's ready to see in spring
+She says spring will come again my dear"
+
+She is ready to take all the dar? sending to Kafka topic twitter-topic
+2021-07-28 15:43:19 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1252559578761359361, "id": 1420409520472268800, "text": "RT @RacCreates: \"The summer of life she's ready to see in spring\nShe says spring will come again my dear\"\n\nShe is ready to take all the dar\u2026", "createdAt": 1627486994000}' to topic='twitter-topic'
+2021-07-28 15:43:19 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AggroCrabGames: Kafka's Metamorphosis, the good ending https://t.co/QHAcdDwSQo sending to Kafka topic twitter-topic
+2021-07-28 15:43:19 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1145446555509542912, "id": 1420409520661143555, "text": "RT @AggroCrabGames: Kafka's Metamorphosis, the good ending https://t.co/QHAcdDwSQo", "createdAt": 1627486994000}' to topic='twitter-topic'
+2021-07-28 15:43:21 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Residents from a village in  Dawei, marched and  laid wreaths to mark the 5th month of mourning ceremony for matyrs of Dawei who had fallen during spring revolution.  MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/WFUOyMxK3F sending to Kafka topic twitter-topic
+2021-07-28 15:43:21 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1357590213048999936, "id": 1420409527212539904, "text": "Residents from a village in  Dawei, marched and  laid wreaths to mark the 5th month of mourning ceremony for matyrs of Dawei who had fallen during spring revolution.  MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/WFUOyMxK3F", "createdAt": 1627486995000}' to topic='twitter-topic'
+2021-07-28 15:43:21 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Are you interested in applying to one of @CMU_ChemE's master's or Ph.D. programs? The application window for 2022 spring admission is now open and runs through September 15th. 
+
+To learn more about our world-class graduate programs, click the link below.
+https://t.co/tPAUWXeiom https://t.co/PKMRYjv8AP sending to Kafka topic twitter-topic
+2021-07-28 15:43:21 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 3092388723, "id": 1420409525778137093, "text": "Are you interested in applying to one of @CMU_ChemE's master's or Ph.D. programs? The application window for 2022 spring admission is now open and runs through September 15th. \n\nTo learn more about our world-class graduate programs, click the link below.\nhttps://t.co/tPAUWXeiom https://t.co/PKMRYjv8AP", "createdAt": 1627486995000}' to topic='twitter-topic'
+2021-07-28 15:43:22 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Pro-democracy residents in Nyin Maw village staged a prayer strike, paying tribute to the four martyrs who fell in spring Revolution.   MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/9T5omZ0G8K sending to Kafka topic twitter-topic
+2021-07-28 15:43:22 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1356965576178982913, "id": 1420409533982076929, "text": "Pro-democracy residents in Nyin Maw village staged a prayer strike, paying tribute to the four martyrs who fell in spring Revolution.   MYANMAR BEGS FOR OXYGEN #WhatsHappeningInMyanmar #July28Coup https://t.co/9T5omZ0G8K", "createdAt": 1627486997000}' to topic='twitter-topic'
+2021-07-28 15:43:22 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Pro-democracy protesters from Dawei, laid wreaths to mark the 5th month of mourning ceremony for 4 matyrs of Dawei who had fallen during spring revolution.  
+MYANMAR BEGS FOR OXYGEN 
+#WhatsHappeningInMyanmar #July28Coup https://t.co/zc7iXWo8TE sending to Kafka topic twitter-topic
+2021-07-28 15:43:22 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1064101219004633089, "id": 1420409534158356481, "text": "Pro-democracy protesters from Dawei, laid wreaths to mark the 5th month of mourning ceremony for 4 matyrs of Dawei who had fallen during spring revolution.  \nMYANMAR BEGS FOR OXYGEN \n#WhatsHappeningInMyanmar #July28Coup https://t.co/zc7iXWo8TE", "createdAt": 1627486997000}' to topic='twitter-topic'
+2021-07-28 15:43:23 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @TexaninHOU: Dick is so stiff. Like a spring. ???#b8 #dick #bigdick #harddick #blackdick #bigcock #cock #bigcock #buddybate #brobate htt? sending to Kafka topic twitter-topic
+2021-07-28 15:43:23 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1345003718673108996, "id": 1420409536398123010, "text": "RT @TexaninHOU: Dick is so stiff. Like a spring. ???#b8 #dick #bigdick #harddick #blackdick #bigcock #cock #bigcock #buddybate #brobate htt\u2026", "createdAt": 1627486998000}' to topic='twitter-topic'
+2021-07-28 15:43:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @_iconicLuna: ??? ?: ? Spring Halo 2021 giveaway!!
+
+       ?? RULES: ?? 
+? ???Follow me and @Arixilla
+? ???Like and Retweet
+
+   ? GOODLU? sending to Kafka topic twitter-topic
+2021-07-28 15:43:24 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1408449760294359047, "id": 1420409543004082186, "text": "RT @_iconicLuna: \u2027?? ?: ? Spring Halo 2021 giveaway!!\n\n       ?? RULES: ?? \n\u205E ???Follow me and @Arixilla\n\u205E ???Like and Retweet\n\n   ? GOODLU\u2026", "createdAt": 1627486999000}' to topic='twitter-topic'
+2021-07-28 15:43:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @AggroCrabGames: Kafka's Metamorphosis, the good ending https://t.co/QHAcdDwSQo sending to Kafka topic twitter-topic
+2021-07-28 15:43:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1267916426947579904, "id": 1420409546695135233, "text": "RT @AggroCrabGames: Kafka's Metamorphosis, the good ending https://t.co/QHAcdDwSQo", "createdAt": 1627487000000}' to topic='twitter-topic'
+2021-07-28 15:43:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @OptimoPrincipi: 1) On a spring day in 1907, two schoolboys were playing on the banks of the River Alde at the edge of the village of Re? sending to Kafka topic twitter-topic
+2021-07-28 15:43:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 1229481291130773504, "id": 1420409547232059394, "text": "RT @OptimoPrincipi: 1) On a spring day in 1907, two schoolboys were playing on the banks of the River Alde at the edge of the village of Re\u2026", "createdAt": 1627487000000}' to topic='twitter-topic'
+2021-07-28 15:43:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @GNCD_YouTube: Golden Child's 4th Anniversary: Spring Again 1M Project status as of Jul 29, 12AM KST
+
+#GoldenChild #????? https://t.co/f? sending to Kafka topic twitter-topic
+2021-07-28 15:43:25 [Twitter4J Async Dispatcher[0]] INFO  c.m.d.k.p.c.s.TwitterKafkaProducer - Sending message= '{"userId": 3053933616, "id": 1420409547311652864, "text": "RT @GNCD_YouTube: Golden Child's 4th Anniversary: Spring Again 1M Project status as of Jul 29, 12AM KST\n\n#GoldenChild #????? https://t.co/f\u2026", "createdAt": 1627487000000}' to topic='twitter-topic'

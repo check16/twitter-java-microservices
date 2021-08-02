@@ -27,7 +27,8 @@ public class TwitterKafkaStreamRunner implements StreamRunner {
 
     private TwitterStream twitterStream;
 
-    public TwitterKafkaStreamRunner(TwitterToKafkaServiceConfigData configData, TwitterKafkaStatusListener statusListener) {
+    public TwitterKafkaStreamRunner(TwitterToKafkaServiceConfigData configData,
+                                    TwitterKafkaStatusListener statusListener) {
         this.twitterToKafkaServiceConfigData = configData;
         this.twitterKafkaStatusListener = statusListener;
     }
@@ -48,7 +49,8 @@ public class TwitterKafkaStreamRunner implements StreamRunner {
     }
 
     private void addFilter() {
-        String[] keywords = twitterToKafkaServiceConfigData.getTwitterKeywords().toArray(new String[0]);
+        String[] keywords = twitterToKafkaServiceConfigData.getTwitterKeywords()
+                                                           .toArray(new String[0]);
         FilterQuery filterQuery = new FilterQuery(keywords);
         twitterStream.filter(filterQuery);
         LOG.info("Starting filtering twitter stream for keywords {}", Arrays.toString(keywords));
