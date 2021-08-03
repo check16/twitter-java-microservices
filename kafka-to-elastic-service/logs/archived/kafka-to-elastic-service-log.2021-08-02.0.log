@@ -1,0 +1,825 @@
+2021-08-02 20:40:59 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2021-08-02 20:41:00 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=kafka-to-elastic-service, config-client, profiles=[kafka_to_elastic], label=null, version=c4fe33aca3c21dc6873be512c724806111c12327, state=null
+2021-08-02 20:41:00 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/check16/spring-cloud-config-server-repository/config-client-kafka_to_elastic.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/check16/spring-cloud-config-server-repository/config-client.yml'}]
+2021-08-02 20:41:00 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - The following profiles are active: kafka_to_elastic
+2021-08-02 20:41:01 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=6a32cbd9-0ef1-383a-9123-f798526eb3d2
+2021-08-02 20:41:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$19f8c3f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-02 20:41:02 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-08-02 20:41:02 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-08-02 20:41:02 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-08-02 20:41:02 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1627929662769
+2021-08-02 20:41:02 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterKafkaConsumer' defined in file [/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/kafka-to-elastic-service/target/classes/com/microservices/demo/kafka/to/elastic/service/consumer/impl/TwitterKafkaConsumer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'retryTemplate' defined in class path resource [com/microservices/demo/common/config/RetryConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.retry.support.RetryTemplate]: Factory method 'retryTemplate' threw exception; nested exception is java.lang.NullPointerException
+2021-08-02 20:41:03 [kafka-admin-client-thread | adminclient-1] INFO  o.a.k.c.a.i.AdminMetadataManager - [AdminClient clientId=adminclient-1] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: Call(callName=fetchMetadata, deadlineMs=1627929692778) timed out at 9223372036854775807 after 1 attempt(s)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting to send the call.
+2021-08-02 20:41:03 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-08-02 20:41:03 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterKafkaConsumer' defined in file [/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/kafka-to-elastic-service/target/classes/com/microservices/demo/kafka/to/elastic/service/consumer/impl/TwitterKafkaConsumer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'retryTemplate' defined in class path resource [com/microservices/demo/common/config/RetryConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.retry.support.RetryTemplate]: Factory method 'retryTemplate' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:62)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.microservices.demo.kafka.to.elastic.service.KafkaToElasticServiceApplication.main(KafkaToElasticServiceApplication.java:11)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'retryTemplate' defined in class path resource [com/microservices/demo/common/config/RetryConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.retry.support.RetryTemplate]: Factory method 'retryTemplate' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'retryTemplate' defined in class path resource [com/microservices/demo/common/config/RetryConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.retry.support.RetryTemplate]: Factory method 'retryTemplate' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 34 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.retry.support.RetryTemplate]: Factory method 'retryTemplate' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 48 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.microservices.demo.common.config.RetryConfig.retryTemplate(RetryConfig.java:32)
+	at com.microservices.demo.common.config.RetryConfig$$EnhancerBySpringCGLIB$$43c22d87.CGLIB$retryTemplate$0(<generated>)
+	at com.microservices.demo.common.config.RetryConfig$$EnhancerBySpringCGLIB$$43c22d87$$FastClassBySpringCGLIB$$5004a389.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.microservices.demo.common.config.RetryConfig$$EnhancerBySpringCGLIB$$43c22d87.retryTemplate(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 49 common frames omitted
+2021-08-02 20:45:46 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2021-08-02 20:45:47 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=kafka-to-elastic-service, config-client, profiles=[kafka_to_elastic], label=null, version=c4fe33aca3c21dc6873be512c724806111c12327, state=null
+2021-08-02 20:45:47 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/check16/spring-cloud-config-server-repository/config-client-kafka_to_elastic.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/check16/spring-cloud-config-server-repository/config-client.yml'}]
+2021-08-02 20:45:47 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - The following profiles are active: kafka_to_elastic
+2021-08-02 20:45:49 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=6a32cbd9-0ef1-383a-9123-f798526eb3d2
+2021-08-02 20:45:49 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$ea70598c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-02 20:45:49 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-08-02 20:45:49 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-08-02 20:45:49 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-08-02 20:45:49 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1627929949731
+2021-08-02 20:45:49 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterKafkaConsumer' defined in file [/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/kafka-to-elastic-service/target/classes/com/microservices/demo/kafka/to/elastic/service/consumer/impl/TwitterKafkaConsumer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'retryTemplate' defined in class path resource [com/microservices/demo/common/config/RetryConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.retry.support.RetryTemplate]: Factory method 'retryTemplate' threw exception; nested exception is java.lang.NullPointerException
+2021-08-02 20:45:50 [kafka-admin-client-thread | adminclient-1] INFO  o.a.k.c.a.i.AdminMetadataManager - [AdminClient clientId=adminclient-1] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: Call(callName=fetchMetadata, deadlineMs=1627929979736) timed out at 9223372036854775807 after 1 attempt(s)
+Caused by: org.apache.kafka.common.errors.TimeoutException: Timed out waiting to send the call.
+2021-08-02 20:45:50 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-08-02 20:45:50 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterKafkaConsumer' defined in file [/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/kafka-to-elastic-service/target/classes/com/microservices/demo/kafka/to/elastic/service/consumer/impl/TwitterKafkaConsumer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'retryTemplate' defined in class path resource [com/microservices/demo/common/config/RetryConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.retry.support.RetryTemplate]: Factory method 'retryTemplate' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:62)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.microservices.demo.kafka.to.elastic.service.KafkaToElasticServiceApplication.main(KafkaToElasticServiceApplication.java:11)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'retryTemplate' defined in class path resource [com/microservices/demo/common/config/RetryConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.retry.support.RetryTemplate]: Factory method 'retryTemplate' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:797)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'retryTemplate' defined in class path resource [com/microservices/demo/common/config/RetryConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.retry.support.RetryTemplate]: Factory method 'retryTemplate' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 34 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.retry.support.RetryTemplate]: Factory method 'retryTemplate' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	... 48 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.microservices.demo.common.config.RetryConfig.retryTemplate(RetryConfig.java:32)
+	at com.microservices.demo.common.config.RetryConfig$$EnhancerBySpringCGLIB$$1439c31b.CGLIB$retryTemplate$0(<generated>)
+	at com.microservices.demo.common.config.RetryConfig$$EnhancerBySpringCGLIB$$1439c31b$$FastClassBySpringCGLIB$$fbd6ec74.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.microservices.demo.common.config.RetryConfig$$EnhancerBySpringCGLIB$$1439c31b.retryTemplate(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 49 common frames omitted
+2021-08-02 20:55:08 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2021-08-02 20:55:09 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=kafka-to-elastic-service, config-client, profiles=[kafka_to_elastic], label=null, version=c4fe33aca3c21dc6873be512c724806111c12327, state=null
+2021-08-02 20:55:09 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/check16/spring-cloud-config-server-repository/config-client-kafka_to_elastic.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/check16/spring-cloud-config-server-repository/config-client.yml'}]
+2021-08-02 20:55:09 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - The following profiles are active: kafka_to_elastic
+2021-08-02 20:55:10 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=6a32cbd9-0ef1-383a-9123-f798526eb3d2
+2021-08-02 20:55:11 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$28123d0b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-02 20:55:11 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-08-02 20:55:11 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-08-02 20:55:11 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-08-02 20:55:11 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1627930511937
+2021-08-02 20:59:14 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterKafkaConsumer' defined in file [/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/kafka-to-elastic-service/target/classes/com/microservices/demo/kafka/to/elastic/service/consumer/impl/TwitterKafkaConsumer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/Users/antoniosanchez/Documents/Aplicaciones/Spring/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 3; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'retryTemplate' defined in class path resource [com/microservices/demo/common/config/RetryConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.retry.support.RetryTemplate]: Factory method 'retryTemplate' threw exception; nested exception is java.lang.NullPointerException
+2021-08-02 21:04:25 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2021-08-02 21:04:26 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=kafka-to-elastic-service, config-client, profiles=[kafka_to_elastic], label=null, version=c4fe33aca3c21dc6873be512c724806111c12327, state=null
+2021-08-02 21:04:26 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/check16/spring-cloud-config-server-repository/config-client-kafka_to_elastic.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/check16/spring-cloud-config-server-repository/config-client.yml'}]
+2021-08-02 21:04:26 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - The following profiles are active: kafka_to_elastic
+2021-08-02 21:04:27 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=6a32cbd9-0ef1-383a-9123-f798526eb3d2
+2021-08-02 21:04:27 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$46d14917] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-02 21:04:27 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-08-02 21:04:28 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-08-02 21:04:28 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-08-02 21:04:28 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1627931068177
+2021-08-02 21:04:28 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 9831911c-62ed-45c4-89f1-34c21b18bf2d
+
+2021-08-02 21:04:34 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8182
+2021-08-02 21:04:34 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - Started KafkaToElasticServiceApplication in 16.744 seconds (JVM running for 19.174)
+2021-08-02 21:06:31 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2021-08-02 21:06:32 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Located environment: name=kafka-to-elastic-service, config-client, profiles=[kafka_to_elastic], label=null, version=d8261f25e2991d5f25b3e8bd82b80ffd1c8c6019, state=null
+2021-08-02 21:06:32 [main] INFO  o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/check16/spring-cloud-config-server-repository/config-client-kafka_to_elastic.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/check16/spring-cloud-config-server-repository/config-client.yml'}]
+2021-08-02 21:06:32 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - The following profiles are active: kafka_to_elastic
+2021-08-02 21:06:34 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=6a32cbd9-0ef1-383a-9123-f798526eb3d2
+2021-08-02 21:06:34 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$3098f2cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-02 21:06:34 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-08-02 21:06:34 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-08-02 21:06:34 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-08-02 21:06:34 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1627931194894
+2021-08-02 21:06:35 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 5396c0bc-94aa-40f7-be2a-353cb4982c5d
+
+2021-08-02 21:06:36 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2021-08-02 21:06:36 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	specific.avro.reader = true
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2021-08-02 21:06:36 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-08-02 21:06:36 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-08-02 21:06:36 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1627931196318
+2021-08-02 21:06:36 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2021-08-02 21:06:36 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2021-08-02 21:06:36 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2021-08-02 21:06:36 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	specific.avro.reader = true
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2021-08-02 21:06:36 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-08-02 21:06:36 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-08-02 21:06:36 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1627931196342
+2021-08-02 21:06:36 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2021-08-02 21:06:36 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2021-08-02 21:06:36 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = twitterTopicListener
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.LongDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2021-08-02 21:06:36 [main] INFO  i.c.k.s.KafkaAvroDeserializerConfig - KafkaAvroDeserializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	specific.avro.reader = true
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2021-08-02 21:06:36 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 2.5.1
+2021-08-02 21:06:36 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 0efa8fb0f4c73d92
+2021-08-02 21:06:36 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1627931196363
+2021-08-02 21:06:36 [main] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Subscribed to topic(s): twitter-topic
+2021-08-02 21:06:36 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService
+2021-08-02 21:06:36 [twitterTopicListener-1-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Cluster ID: oSL0BV0sQOmDFbG6K0tj-w
+2021-08-02 21:06:36 [twitterTopicListener-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Cluster ID: oSL0BV0sQOmDFbG6K0tj-w
+2021-08-02 21:06:36 [twitterTopicListener-2-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Cluster ID: oSL0BV0sQOmDFbG6K0tj-w
+2021-08-02 21:06:41 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port(s): 8182
+2021-08-02 21:06:41 [main] INFO  c.m.d.k.t.e.s.KafkaToElasticServiceApplication - Started KafkaToElasticServiceApplication in 18.233 seconds (JVM running for 19.937)
+2021-08-02 21:06:48 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Discovered group coordinator localhost:39092 (id: 2147483644 rack: null)
+2021-08-02 21:06:48 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] (Re-)joining group
+2021-08-02 21:06:50 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Discovered group coordinator localhost:39092 (id: 2147483644 rack: null)
+2021-08-02 21:06:50 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] (Re-)joining group
+2021-08-02 21:06:50 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Discovered group coordinator localhost:39092 (id: 2147483644 rack: null)
+2021-08-02 21:06:50 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] (Re-)joining group
+2021-08-02 21:06:55 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Finished assignment for group at generation 1: {consumer-twitterTopicListener-2-abaf6177-4482-4960-82ad-6c6ff7f8ad5a=Assignment(partitions=[twitter-topic-1]), consumer-twitterTopicListener-1-05a05609-2273-4ad8-bc40-5a2ead3bbc9c=Assignment(partitions=[twitter-topic-0]), consumer-twitterTopicListener-3-2a004fa9-1158-4363-8913-e1a60288ffc2=Assignment(partitions=[twitter-topic-2])}
+2021-08-02 21:06:55 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Successfully joined group with generation 1
+2021-08-02 21:06:55 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-2
+2021-08-02 21:06:55 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Successfully joined group with generation 1
+2021-08-02 21:06:55 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-0
+2021-08-02 21:06:55 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Successfully joined group with generation 1
+2021-08-02 21:06:55 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Adding newly assigned partitions: twitter-topic-1
+2021-08-02 21:06:55 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Found no committed offset for partition twitter-topic-2
+2021-08-02 21:06:55 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Found no committed offset for partition twitter-topic-0
+2021-08-02 21:06:55 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Found no committed offset for partition twitter-topic-1
+2021-08-02 21:06:55 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Resetting offset for partition twitter-topic-1 to offset 0.
+2021-08-02 21:06:55 [twitterTopicListener-1-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-1]
+2021-08-02 21:06:55 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Resetting offset for partition twitter-topic-0 to offset 0.
+2021-08-02 21:06:55 [twitterTopicListener-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-0]
+2021-08-02 21:06:55 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Resetting offset for partition twitter-topic-2 to offset 0.
+2021-08-02 21:06:55 [twitterTopicListener-2-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions assigned: [twitter-topic-2]
+2021-08-02 21:06:56 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 500 number of message received with keys [1364592571, 41262304, 2197844672, 900643616212824065, 1104640023582826496, 612767900, 903569155282096128, 1386109685741260803, 1388997349259816960, 903569155282096128, 179604152, 1252649377107042304, 814015464, 1417340371089174528, 1310646554185916421, 531229094, 1237044108155219968, 1359851446464872450, 892959492, 1420148377900273665, 1343078824070803456, 753018583702175744, 706365490478915584, 116500517, 1131668984925949952, 4505018293, 1031827605501222912, 729000193, 1209233788372475904, 1356870077157543936, 1411056469022236677, 1242146682424492032, 2561102452, 951841615928287239, 3294773885, 1325860925568479235, 1309384757017481216, 1209684721, 854155777514360835, 840241467637551104, 524677328, 2636403875, 729055989090029568, 382073626, 16358930, 256110006, 725472022910918656, 1385841149882011648, 3323363217, 401482880, 2247240233, 880581472691732480, 1001964014744887296, 3168156032, 1070493187268116480, 143418661, 1155050621696794625, 886566420154388480, 24301630, 919306460558794752, 1185470428585877504, 1357225968369213440, 319097827, 254268566, 744568554880569344, 1164327609523691520, 2598669494, 314079289, 1387575410800529409, 171637912, 314079289, 1073657473473699844, 314079289, 1405714562939166720, 4769420084, 1342593415003992065, 1411103190779580418, 92156860, 1504436582, 1151494493054484481, 975839820399497217, 69594066, 50997778, 1376329970277040131, 155665588, 4455240074, 1375133695405867008, 1343362946852937728, 152651855, 1358442915404668929, 1418724969345912834, 53475888, 96248245, 1398293641160839178, 1628672744, 1069705285965504513, 1307355301549543435, 1386109685741260803, 1416157994941825025, 1064246657552916482, 44678782, 1386109685741260803, 1351996282294980611, 2246120641, 494271016, 599309315, 113435307, 1419060382900146182, 3127935183, 15678388, 978201573078773760, 834298046, 978201573078773760, 1419970290797350913, 2176302170, 1335154537078935554, 384448379, 4787547881, 2310759129, 1306247109423792135, 726720242462937088, 2585497967, 1293937765722263552, 1073657473473699844, 230412418, 1314164146934513665, 1031403872181346304, 217208302, 1327935633445199874, 2449514328, 1290646918574542848, 1027311163938365440, 33901209, 212899152, 2877932795, 1376566667170447360, 1216514090845265922, 16799174, 1386109685741260803, 2239132789, 2533453481, 932003185119592448, 862988449321824256, 1161113567040434177, 1379887643324948481, 2677635510, 1278273884903505921, 1364159144622780417, 1085942007489613824, 400267036, 1347471985287323648, 1347471985287323648, 1347471985287323648, 1347471985287323648, 1127829883013361665, 1073657473473699844, 88488045, 1367224691920941056, 1386109685741260803, 3809581275, 213930032, 1243990473934622720, 1243990473934622720, 1031291870, 270655201, 1282753133282832386, 1398866593237508100, 1398866593237508100, 1398866593237508100, 1398866593237508100, 481759323, 2668641956, 705950701986275328, 1066951963936403458, 1356537226025340929, 540645873, 481759323, 1083504991149662209, 2742796799, 864644258, 784033017807441920, 1259876489857773569, 3986763974, 430028375, 1077780570527023104, 1259876489857773569, 334155403, 1259876489857773569, 20269833, 1363873787104481280, 1267531502000017408, 924173288409939968, 1106427288118272001, 1400873276243591170, 1103680995583320064, 1363873787104481280, 1303071072, 1276930841684381702, 1259876489857773569, 1259876489857773569, 1376672493923078145, 1285698160665546753, 1259876489857773569, 1401319830503006211, 1259876489857773569, 780544592, 40877460, 1074332413441073153, 314079289, 726680073433174016, 1259876489857773569, 979549497259786241, 1259876489857773569, 4257172456, 314079289, 4234697535, 1259876489857773569, 133854498, 1469336174, 1259876489857773569, 1731771679, 1259876489857773569, 1001552492138762240, 1144745332007407616, 26275126, 353454441, 1059532622, 1414602146893475842, 1363970498540015617, 915899697692160000, 1390197332273246209, 38408640, 881153006191947776, 2813126401, 364988954, 53861594, 914610521088937986, 1386109685741260803, 1260472988371226624, 806176125026086916, 717065306435268608, 1239228892126294016, 1365127374719787008, 1014965993104429057, 971620109197312000, 1067124445, 808368930507132928, 825295478753521664, 935302988045860864, 4538989218, 128574191, 4832549112, 1303421133618925577, 1215407215189856257, 730656136689520640, 611425178, 742123840612900864, 971620109197312000, 1386109685741260803, 1421498134811889668, 980453965753126914, 1412425959047942151, 874402553844334592, 878711545773121540, 1356249903505174528, 1364130692075028483, 1210025351574904832, 1303421133618925577, 3184646553, 1386109685741260803, 518872086, 30912835, 1382393881266941957, 1141157610332311552, 1088090618360942592, 2879916084, 1373289916101132292, 2702846355, 610928952, 167126749, 167126749, 34165682, 3496033577, 1251566346778873857, 1341547890007822337, 1416307848716427265, 1279883378968399875, 1397988883648978950, 882236157857337344, 1386109685741260803, 971620109197312000, 624261753, 1551566784, 1127829883013361665, 1105917714760118272, 374567825, 1186794901335367680, 1390354804254326787, 1151494493054484481, 1328279552229969921, 4263007693, 2954607152, 271593573, 723890875315544064, 1141025471418830849, 113834898, 258049193, 171246416, 1145856668, 4908885163, 1161589812412997632, 1150797795076390913, 781497453333712897, 2519177603, 1268944037870014465, 1310663422669811712, 53196969, 1289487002878926849, 71476758, 1142505617166340096, 358251541, 1276950627319459848, 942816613480435712, 1314164146934513665, 1356535962671611905, 892837063388737538, 1421169699673579521, 1235982926258606080, 1023245123151384576, 3235282868, 2967672712, 527217632, 1303946800462692355, 3296107866, 1262762872607608833, 971620109197312000, 808368930507132928, 2631529402, 1240980997358981120, 232793848, 1093744260, 35345432, 1065290568069251072, 971620109197312000, 1929011485, 971620109197312000, 1373093869387182080, 349336703, 988801, 989669965484756992, 636296925, 971620109197312000, 16009794, 1350032645326065665, 1413563027752894465, 971620109197312000, 1386109685741260803, 942926377866678273, 558675275, 971620109197312000, 1381150554060021762, 34392255, 949666293027885056, 4239054922, 971620109197312000, 1402677829255401472, 1406207244895653889, 1364913579359617030, 1299893467116695556, 951917252743282688, 101995317, 295421604, 340333126, 1321544342, 1358276551595458560, 1019487965570101249, 2352285871, 1378009141, 1347551648353300480, 1398866593237508100, 1398866593237508100, 2967672712, 1370844444895838208, 882601830676606976, 1420080269676134405, 1036472538841456640, 1926660001, 632659077, 1204809200670531584, 111366242, 22696550, 212426586, 1180164053030670336, 1295715136141963267, 814802641, 1386109685741260803, 1268987398202982400, 1352349172641505283, 1029435582806667264, 1401315556830158848, 1151494493054484481, 1151494493054484481, 1314164146934513665, 68171631, 1686103092, 174891995, 1256359946033266688, 1332360179313160198, 1292212184097923074, 1229451507768209408, 612368754, 1393631129865908230, 1106861008650489856, 1110871393896296448, 4758454991, 923976090707734528, 702058566971211777, 302877139, 1395894617577504769, 732850181046194176, 132263536, 100549257, 1157606248570904576, 1370573326830108674, 1085919344645816321, 922683076349710337, 1388756203971350532, 1278273884903505921, 1376095001159983104, 1267599673713258496, 1121951635746381824, 1402042493584224256, 49673389, 1259876489857773569, 2453755698, 1121951635746381824, 1259876489857773569, 1121951635746381824, 1259876489857773569, 1259876489857773569, 1244367726900019200, 1259876489857773569, 1278677068222472193, 2967672712, 4352684303, 1259876489857773569, 1128495595851661312, 1259876489857773569, 711795946770698240, 1259876489857773569, 1404728542152245248, 339398952, 305705081, 1288683332507701252, 985566672089206784, 705112873500971008, 1133172388294778881, 1262137297140662274, 2792870353, 870697716828872705, 87075324, 892706984620851201, 1309373017714233344, 904384407322206209, 48992513, 1309373017714233344, 1376722092410990592, 1309373017714233344, 199793632, 1291372926906691584, 960358190, 1376722092410990592, 1252383651330842626, 819277391071739904, 60362408, 10855832, 1313552352952098824, 1289698805915570182, 90935587, 1542463148, 1087793685981483009, 1401131208956944391, 1053697748321501184, 1296610684172513280, 1398970069158449154, 1002190903707025408, 971620109197312000, 835136041409478657, 1053697748321501184, 1097956141533925376, 1386109685741260803, 927549016451170304, 963081696454332417, 999776731610451969, 4717706154, 1258321558201708546, 1294518915335254018, 12442612, 819277391071739904, 1299898894487175169], partitions [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and offsets [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499], sending it to elastic: Thread id 23
+2021-08-02 21:06:56 [twitterTopicListener-2-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 500 number of message received with keys [1403020350871400451, 511708135, 1358806251077922816, 1375961552122044417, 31268794, 955443550048608257, 955443550048608257, 82641492, 4775356514, 866263546178527232, 1031560806033514497, 2950961556, 108547794, 358986887, 176607982, 997618773497704448, 2860976870, 836507437, 452436456, 234466998, 1404083507559907341, 1260872968789536768, 1624383361, 335404071, 1224644325906108416, 1304857315611414531, 136017767, 1117500818641625089, 69947079, 3308349961, 1187925999389986816, 14627106, 1328992543090962432, 1266227762190114818, 1300091225337257985, 782199615999311872, 1255686031, 2798503111, 902616149778685958, 30387315, 4797635777, 2655180373, 1257548010113970181, 23526388, 1364509952698589185, 22926744, 15583678, 4220072895, 187314610, 852719834941063168, 1358806251077922816, 1375961552122044417, 1211645810863030272, 1390262323743494145, 337594729, 1313225728171925508, 779175673264902144, 1026068175522340865, 1401707845222113287, 1125076780790927360, 996887898720006144, 1404109352965967874, 1291662304610619393, 1056935575263956992, 888381547203743744, 15384460, 1118683912803368961, 1410724867406635013, 1152188289996247040, 1322997689999593472, 854460182352539649, 2450860868, 1251672655, 1411718859753771009, 29594977, 1110071232081215488, 331319955, 2230309497, 1025952940706684928, 2535741349, 1707841459, 1394391188527058950, 1317173988850913281, 1394391188527058950, 107213818, 271227918, 1324719560080068611, 1394391188527058950, 1410724867406635013, 1399786469439410176, 1276141157827960833, 1011595817118027776, 1394391188527058950, 1224768414939598856, 143480736, 1371493492640256011, 1119043960226316289, 1018301784303865856, 69783751, 332407856, 1400361482475409409, 236596840, 2555365140, 1255492678604722176, 1421720588951855104, 1313233759735623682, 1401121463609004037, 456964547, 1028956477464166401, 798581891578392577, 388011207, 924395134946553856, 945951753731747840, 1284603105166991366, 1251000342424109056, 755584355649585152, 1358806251077922816, 1375961552122044417, 955443550048608257, 955443550048608257, 955443550048608257, 955443550048608257, 2449766120, 384020511, 1347452700456222720, 1407405149878992897, 1395406202968842240, 310146322, 1421720588951855104, 999485062944034817, 80083345, 1407405149878992897, 1204437339206029314, 1914143904, 1373722743481454592, 90123523, 1329570725842333696, 254029367, 3357684921, 955443550048608257, 17685885, 1401121463609004037, 1345652009618255872, 1329370779935531008, 1527071629, 1347544004766871552, 1246666104136765447, 824539674588770305, 423032210, 370366433, 1413688457579442179, 77326923, 1009891005326417920, 845365669, 1404896672308776965, 924395134946553856, 957522483883601920, 1223641787476140032, 957522483883601920, 955443550048608257, 955443550048608257, 1421786309362786309, 341714231, 1338696087868076034, 23210223, 983404699, 2727683563, 1284219632912564224, 2415932318, 1223641787476140032, 536374288, 851718402519564288, 1364497572509880322, 811058560868159488, 1112802487, 397020953, 1384757195636559875, 2727683563, 1378741886, 1246333516717031424, 1215226808746070016, 15336964, 738812945904214016, 757912701301559296, 1370359532, 825773772, 1016741768489062402, 1219664735559352321, 1347396338581790723, 2832482599, 1410724867406635013, 1358806251077922816, 2832482599, 1375961552122044417, 129960403, 1249987779292880896, 955443550048608257, 1393421994436141057, 34625833, 548199780, 339706007, 3311025260, 990378005863247872, 1153430520555905024, 158455000, 162078470, 1290800865364910088, 1073328737679302657, 436096973, 506031439, 991751404749500416, 2689977324, 856577760197738496, 1409273055969484803, 1283402400, 500636842, 189982086, 892541861163712513, 3035654799, 1541097518, 1368762311477891072, 283808405, 1347396338581790723, 1265264630, 1050335518704189440, 2994670071, 2775683762, 759617747873431552, 70455504, 1398116528017530884, 1346390742256799745, 69705819, 749377808279937024, 2837967069, 51949229, 1416692126625275905, 24609394, 1358806251077922816, 1347396338581790723, 1375961552122044417, 46757671, 580015858, 1357289348190728192, 713608566473527296, 953845758662467584, 2926619579, 156979922, 1232753040714633216, 316832974, 1356870308955783170, 1356870308955783170, 1401121463609004037, 1373774856278319107, 383403885, 1239962582141882368, 878295439535198208, 1297219184502484995, 19175718, 1401121463609004037, 961049639104536577, 1277715645430468608, 186553219, 1417686278947151875, 1253685736173260800, 1403020350871400451, 1401121463609004037, 254230351, 947303248590921728, 843760693375635456, 1274408225580945409, 1157616846163599360, 824986746706358272, 631473820, 1347544004766871552, 1417093086925053960, 1331858953102368768, 557091065, 839635344228175872, 1336273439972319233, 18303259, 1512971456, 701116694220173312, 59322829, 573418702, 53500296, 1392630161460416515, 1344307974353920001, 1309574393778102272, 963910847960510464, 1320230296323870720, 1272083550322360321, 2900947291, 1204128767251230720, 1201824270353129472, 1383699060754771970, 1290696038123212804, 1417944553949179908, 1364497572509880322, 1208650357750030336, 875104610, 1311131811808862208, 1371566216280674309, 1413335307425091586, 31360112, 855558369733627904, 154221332, 1358806251077922816, 1353415356803674113, 1375961552122044417, 1320128262861852673, 830551991180988416, 1211077727282794498, 184638525, 1284066214747295744, 33834423, 1198332066154401799, 1338742544817999872, 1195049123432370176, 1366311101781053445, 1325107536916336642, 1371493492640256011, 824986746706358272, 815599477524336640, 738812945904214016, 478730006, 1391924129209765894, 999015088219656192, 90523664, 1270004207244976131, 763291, 1487724158, 470256140, 325361344, 1290696038123212804, 3246669467, 2321647188, 1316397146204041218, 4128545654, 1323820941730816003, 1322665575877906432, 984997255, 955443550048608257, 1367603739125817344, 2889491559, 4844841499, 1158930468189933568, 1329140899415199748, 1278423998464958465, 484911014, 1261223002160545792, 742991414, 1027670952, 49496869, 1339361761372332032, 545576888, 1380546457, 3311025260, 1117500818641625089, 1346671494, 1642406821, 3323014552, 2680535116, 49496869, 3323014552, 1225452177604403201, 1381735510880755715, 4827234221, 237527047, 2974753995, 1358806251077922816, 1375961552122044417, 768982531702071296, 1403020350871400451, 1131838779885592577, 1123652421824143360, 1169670622567440384, 3246669467, 209383326, 49496869, 1022316394459750401, 1586490487, 1013191636711624704, 1214465101614370817, 1388734427040292865, 824986746706358272, 173180494, 53161385, 1276340061148262400, 1388734427040292865, 92623637, 1402824011000647682, 356079734, 3675501141, 24387971, 1347396338581790723, 2358562603, 1363288094, 2652391601, 978785311575691264, 1405834807548911619, 3642853577, 20135723, 500459662, 2717306778, 1410724867406635013, 3151763066, 79061630, 1150977485229744128, 943992408802459648, 1563480721, 967867467715481603, 3323014552, 4809385992, 2869006242, 1339424101891534850, 943992408802459648, 107470161, 1016680718, 750328081, 1286017385896394763, 1117644801262985216, 720576770, 822553043921235977, 22903166, 1371493492640256011, 1358806251077922816, 1375961552122044417, 735563651499884544, 1405834807548911619, 1374747843639005184, 209475710, 3323014552, 1458487358, 860108750, 1220770388516450304, 590799861, 1131838779885592577, 306323339, 1216484788988792834, 3323014552, 920200622548439040, 3323014552, 1204575103154999296, 330860485, 3323014552, 1171695676457193472, 150820027, 1028217724147838976, 18457851, 3323014552, 1018358232216100865, 3323014552, 1255148080787189760, 121595519, 3323014552, 495834672, 1222556379405340674, 1393176420592017410, 1401821153866493956, 3323014552, 1258844889321738242, 3323014552, 1287025831, 3323014552, 3323014552, 839093415505723392, 3323014552, 3323014552, 1364428247484694534, 3323014552, 57790502, 3323014552, 836962637472727041, 1369247491749801989, 1024642253950734337, 1293286699674599431, 3323014552, 46730669, 3323014552, 1097569275504676866, 4006013233, 802358713, 1046748614712791040, 20994143, 1293286699674599431, 1268497361178890243, 701892484440399872, 268008407, 1195049123432370176, 830879925796106240, 2481039936, 989441797704339456, 1135888430578176000, 1066322704041693186, 236961870, 27708993, 1122577801318666241, 1111398054622625794, 574662021, 4764047888], partitions [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2] and offsets [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499], sending it to elastic: Thread id 27
+2021-08-02 21:06:56 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 500 number of message received with keys [1251909062222020609, 1019248709777920001, 1304976018189553664, 2432724377, 1186923558519410688, 1724613062, 15946100, 1408515695906799620, 1141573055547924481, 1337430590241562626, 1123741107970629633, 1319362509174784000, 3166329431, 1210760722600226816, 2288753174, 1421804825642115074, 714783091051610112, 713742653318365184, 1398349437903196160, 1063872109, 1157545301277675520, 1114445659833167878, 2593593024, 1404149680758534147, 1339540079602110464, 211291876, 1371574893561675783, 3321669866, 1367826289370034183, 1172734685581062145, 1270414887886471169, 187087286, 880574847771746304, 1251187803750309889, 1248078803240398848, 1354495753842876424, 1070884032186003456, 250253697, 1003119369835053056, 1389990240241209345, 14553297, 1089224705993715714, 71165583, 35355377, 23241005, 97171668, 1298084281349050369, 521924245, 224754314, 153145459, 1224961108215312384, 1123657649101393925, 25472083, 1394571775346761730, 1313586987182501889, 1104598433975812098, 1067179234706231296, 917084235734929409, 1252085746283896835, 323571980, 30770775, 1109562786609315840, 74466688, 336137968, 19395857, 1329535042872254464, 193081385, 860963449937027076, 403449484, 1009109054340378626, 615637028, 1400484296792621057, 1001666251482157056, 1643123766, 1400484296792621057, 1226823464637493249, 1019600257938796545, 1091317801392975873, 1004713117908066304, 1322242901405884418, 384958264, 1372637899036954630, 1324270137365725184, 29617902, 1236224655909888006, 797749182887038976, 1382032616824651777, 1250164632968298497, 1006876432390213632, 1218237334333939712, 558736829, 55035917, 1162763763088601088, 808410029925826561, 1085904610978598914, 1447724982, 1337430590241562626, 735885600, 1343609476482539520, 1382032616824651777, 1337430590241562626, 809987639621189632, 1091392159578816512, 3157727211, 842819264813907968, 1091392159578816512, 709161590906552320, 428635390, 882138676733427712, 1337430590241562626, 1242861114838282241, 776124420800778240, 1180222834418880512, 41474064, 1404661188437319681, 1313693166713933824, 1404661188437319681, 1382042044663668740, 418033567, 21079776, 1198238911, 842819264813907968, 2494596649, 1239918349641015296, 808410029925826561, 1334989424736743424, 744740912949956608, 1407130100664094720, 1337430590241562626, 2660930777, 935390361286991872, 741275568, 251099478, 583802108, 1300409558897131520, 1416148400316116993, 227048594, 1023492087315095552, 875666268858306561, 1334472541335740418, 799125090, 1404661188437319681, 1404661188437319681, 1119004571500785669, 1261130797462913027, 2725535753, 1058734604880936965, 14552720, 1223025458, 1409558987352297474, 1138610706536943616, 1347177640243900417, 1382032616824651777, 1337430590241562626, 43420926, 3311871105, 2358258798, 31505903, 2557852639, 1407898742355902464, 794097025356689408, 159979829, 1410869413952114689, 2547539631, 464685802, 1404661188437319681, 1404661188437319681, 1382032616824651777, 159979829, 469579064, 1358714183324368898, 4870251772, 1224209828559511552, 1404234317803360257, 321498058, 159979829, 1167610300327243776, 1258699649306615810, 1068537252148469760, 1337430590241562626, 45804349, 159979829, 1042191853, 266002115, 1512996793, 52263390, 854781618002812929, 1067179234706231296, 60872689, 33601082, 1396403192917762049, 1621256556, 1241354939114426369, 76061899, 1003119369835053056, 770530045668499456, 1064019024751800320, 4905958412, 904863042537738240, 1000186990195703809, 733935816, 829793342, 2934008879, 1377580359529955331, 1457503802, 1246880105856667654, 844337865718808576, 1863903781, 2753304248, 325335490, 401057993, 159979829, 3165530524, 251092819, 1571543029, 1384131812188844034, 1058734604880936965, 2362613947, 159979829, 1868818981, 159979829, 28452609, 159979829, 1421023025374318592, 1404661188437319681, 67210714, 74296458, 1293573725502222338, 865784763994341376, 1303734772821299201, 502813171, 53276609, 94150521, 45547830, 1343001574050770946, 3280148972, 1288965946670026754, 435098357, 584066966, 1391763691784351749, 501397421, 246843523, 2611132624, 1316347185521463296, 1095754984237469702, 1342512456023814145, 1288881615293362176, 1654787179, 1155344626590654464, 857943253970300928, 4913320595, 863208521994825728, 1382032616824651777, 1337430590241562626, 1305654937548922882, 2829174982, 1324270137365725184, 1382032616824651777, 1250164632968298497, 1337430590241562626, 1363593537837813761, 3876548541, 1403977413516660736, 1404661188437319681, 1407692052540784642, 1324270137365725184, 1382032616824651777, 1092753985679835136, 1337430590241562626, 1337430590241562626, 1382032616824651777, 1250164632968298497, 1337430590241562626, 1382032616824651777, 1337430590241562626, 933875414786650112, 1223025458, 987002445711757312, 1382032616824651777, 1337430590241562626, 1085484955, 572733056, 809519178, 923309024451481601, 1000814755664150528, 1382032616824651777, 1250164632968298497, 987002445711757312, 1251909062222020609, 3010849339, 1250164632968298497, 1382032616824651777, 1058734604880936965, 987002445711757312, 1404661188437319681, 780707721209188352, 1382032616824651777, 1250164632968298497, 3153530760, 502813171, 917167508301533184, 47556937, 987002445711757312, 27726046, 1382032616824651777, 3377903855, 1396850118796664837, 987002445711757312, 1382729779699449862, 905481468268470273, 1281253609988997120, 1250164632968298497, 1250164632968298497, 1337430590241562626, 71761060, 811790936, 1206634793229787137, 1382729779699449862, 882456899341430792, 1036139623, 1019984090127392768, 4229040399, 1111715405800841216, 1376630872015839243, 34981094, 1371129090330091520, 1157567380496818177, 3221928995, 334563043, 1404661188437319681, 953336386412740608, 1235778405372575744, 1337430590241562626, 1346309181058510848, 866299118918008833, 923309024451481601, 1228206003071533058, 850722137728053249, 1926973302, 24482650, 932603564, 837735827992113152, 1219541569314881538, 16793718, 136442042, 3024808129, 1416763360981372933, 1340714037131112448, 1388159882667249665, 934477679885258752, 958863463593402369, 2359311132, 941949279861481472, 425459816, 916723441675456512, 954779768712564740, 1324270137365725184, 1392274950162104327, 1250164632968298497, 3133497048, 1337430590241562626, 931923031739584512, 835951233018048512, 31275096, 1088471106288275459, 1372851936744079361, 837164200535420928, 1373208212560883713, 1324270137365725184, 1001373392434581509, 1250164632968298497, 1337430590241562626, 1163221690723131392, 1324270137365725184, 2195155446, 1322142621251391489, 960956089327149057, 1250164632968298497, 1337430590241562626, 1013068025954627584, 542929800, 1027658857387110400, 84324268, 1300506451786387456, 1324270137365725184, 2708895644, 1281277397481000971, 1391792031400407043, 31275096, 2261680029, 948038111002492928, 1250164632968298497, 1337430590241562626, 1239965136728641538, 1281175124155064320, 134434122, 1417215210650316814, 1382032616824651777, 1250164632968298497, 1287419748628615170, 1287419748628615170, 1287419748628615170, 1324270137365725184, 2494373798, 1337430590241562626, 1250164632968298497, 1337430590241562626, 1324270137365725184, 764744214, 365157937, 1010262314547699712, 1255022272412172288, 1250164632968298497, 1337430590241562626, 884081957776220160, 1396639258648227840, 1324270137365725184, 2708895644, 733348314872172544, 1250164632968298497, 1337430590241562626, 1344605319859744773, 1280914051145568263, 1371249539819126791, 68565194, 1058734604880936965, 1553776560, 2806796418, 457857706, 1372183448253784070, 1287419748628615170, 1420190378884481025, 1336739676674285568, 751945310184673280, 1162676708497068034, 1267966180414889987, 1226207649949073409, 193738746, 731259552159698944, 1024572593179897856, 367675691, 250946511, 882456899341430792, 1399562932904677380, 2584082112, 1295189816900898816, 1319832814582456321, 1416444648545992705, 1410056135462297603, 547456398, 1287419748628615170, 1412580303760146433, 3107019086, 1178029086993780736, 2241987678, 1409664875555553281, 346934795, 1211112548524679168, 1337430590241562626, 997418360639016961, 333373020, 3158402845, 1649172458, 1294815808313597954, 961490762767638528, 1177972758640234497, 1287419748628615170, 1131587406455615490, 16655744, 564045692, 2374380643, 109655308, 1404095517232189442, 1209782807116910593, 2930083946, 1237529554685530118, 731259552159698944, 1338246507267579905, 82465604, 1343075774396575746, 2740592444, 729142891004694528, 66485419, 713023927388344320, 190626981, 527947509, 1250164632968298497, 1337430590241562626, 1860022675, 1058734604880936965, 542044576, 1340991311894073346, 2174032104, 1175190584836808704, 1109320334660919296, 830451647851618305, 127113544, 1137641774481072128, 1092980256821166080, 954047720360153088], partitions [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] and offsets [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499], sending it to elastic: Thread id 25
+2021-08-02 21:06:56 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 136 number of message received with keys [1337430590241562626, 1252044483128156162, 704799038667935744, 174715470, 1215307764425080833, 1093751157162295297, 747890764202520577, 1379963795897004032, 1327906821009502208, 1208095987794882560, 559787052, 501162797, 402283294, 58455851, 1355018823716495363, 4825580211, 132535895, 1360313248252329990, 1218256329573355530, 837015833381638144, 1089621336169857030, 1292097119348809728, 1392466384735641606, 25813718, 21560089, 1287419748628615170, 1287419748628615170, 1337430590241562626, 1250164632968298497, 1337430590241562626, 1418329763505184769, 1119504010396884992, 1266911876753100801, 1297253599601360898, 59169600, 1391579217628778499, 1187989045730656256, 1275462892591202304, 987002445711757312, 1962748536, 987002445711757312, 1412157818162102272, 987002445711757312, 987002445711757312, 1250164632968298497, 987002445711757312, 4213804564, 469028556, 987002445711757312, 1313192500379750403, 120936558, 987002445711757312, 808065592859234304, 930174438, 315370094, 15686959, 27907022, 1359265043242713090, 1384677010837016579, 983884523262881794, 23633216, 1399068769222340608, 987002445711757312, 1250164632968298497, 46634245, 1222451612863606788, 1123302766510772225, 1108641855309115392, 21560089, 1399068769222340608, 1287419748628615170, 1287419748628615170, 2296411880, 1250164632968298497, 1346733514138537984, 23694562, 1037149060535209984, 1026621330597326849, 707940386988298243, 2697070104, 1022172546089668608, 236493520, 989852389, 1399068769222340608, 3307208432, 1368893754304851969, 1310529530075860992, 1250164632968298497, 1162473506845667329, 1058734604880936965, 1287419748628615170, 23530675, 122839041, 1162473506845667329, 469028556, 1310344039703642112, 1059912277841862657, 59209022, 987002445711757312, 72889752, 201272892, 706161706309963776, 1399068769222340608, 1250164632968298497, 1399068769222340608, 980438893, 1250164632968298497, 1348136616058114048, 1399068769222340608, 1018016335, 1064108650271309826, 1205487457623531521, 1337430590241562626, 1250164632968298497, 1287419748628615170, 1287419748628615170, 1273839314267443200, 1287419748628615170, 1326631943883137024, 1324270137365725184, 1281253609988997120, 1250164632968298497, 1382032616824651777, 1337430590241562626, 1337430590241562626, 3086240573, 731144884095193089, 1324270137365725184, 1399068769222340608, 1250164632968298497, 1337430590241562626, 1250164632968298497, 84915720, 3568149856, 712299270917980160, 1324270137365725184], partitions [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] and offsets [500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573, 574, 575, 576, 577, 578, 579, 580, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635], sending it to elastic: Thread id 25
+2021-08-02 21:06:56 [twitterTopicListener-2-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 74 number of message received with keys [255159584, 1225760449016188929, 1195049123432370176, 1358806251077922816, 1375961552122044417, 143179881, 1247052982761422853, 1014769572967264256, 868404059312721920, 1071136804181553152, 364742419, 853920630370168832, 450051371, 726701960, 1258060194, 1394986733851217921, 723236143337230336, 40683617, 1370999888884998145, 249455711, 118130495, 1326110825136975872, 282015659, 1575958410, 932187566157185024, 1290632964263555073, 2692765586, 319158918, 1013107891581214722, 16834962, 1221516043220185088, 2237485705, 1379888661295104002, 1367656120739762185, 10732662, 1306289107, 710123736175783938, 344872440, 1270502091128258562, 177714532, 874708023712899074, 1258072756366635009, 706544442212278272, 605259349, 1411028554930814979, 1343369786, 260691992, 1356936239346143232, 1298712763934547969, 810730934, 893894774868123649, 832307162, 1401121463609004037, 1309565187041628160, 1358806251077922816, 1375961552122044417, 1286763252064690176, 1979606202, 2746492252, 1279236798087135235, 317291346, 1462787910, 1233413496664199169, 311062620, 1401121463609004037, 1364497572509880322, 1422272559178043396, 1381597444056756228, 1188939823614173184, 2795910509, 4481474554, 1534087957, 2672433604, 330553445], partitions [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2] and offsets [500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573], sending it to elastic: Thread id 27
+2021-08-02 21:06:56 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 79 number of message received with keys [1253075333911384064, 1237585972201771009, 1401912851661471750, 213136009, 1150797795076390913, 452757845, 80806351, 1417510986748203012, 111393982, 2251868684, 235897934, 1044255544096239616, 1114801770, 18337218, 24051596, 1256359946033266688, 1198683640470888450, 15738809, 25263738, 1347291458278080513, 1394022882641072137, 1241962003083608064, 1307355301549543435, 876127270364229636, 1278273884903505921, 1414089622158815233, 1198683640470888450, 887885860208881664, 1325230429440536576, 2422310648, 92673706, 592174350, 288636734, 4187352195, 1321013880, 800961606557368320, 1113247303, 1173387044950818817, 427734727, 1411792117148667909, 96164574, 1198683640470888450, 1259876489857773569, 1142424032794406912, 1019058268025556992, 1259876489857773569, 1072266794, 1259876489857773569, 56054744, 1198683640470888450, 93722466, 1306969838510723072, 2940066912, 40628103, 1213876874, 1072266794, 143005275, 763884816274251776, 1360132688733237249, 1027521135154327552, 23659718, 1344911548804947968, 1418938291936694272, 971620109197312000, 1030767015433330688, 1386109685741260803, 1386109685741260803, 2611282711, 570275619, 1279339271300632577, 1127829883013361665, 971620109197312000, 1386109685741260803, 1386109685741260803, 907108269163896832, 1331038717088329728, 111188139, 1001173882131439616, 1091083106273161216], partitions [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] and offsets [500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573, 574, 575, 576, 577, 578], sending it to elastic: Thread id 23
+2021-08-02 21:06:56 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [412690386], partitions [1] and offsets [636], sending it to elastic: Thread id 25
+2021-08-02 21:06:56 [twitterTopicListener-2-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1420796633005101057], partitions [2] and offsets [574], sending it to elastic: Thread id 27
+2021-08-02 21:06:57 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [4864685283], partitions [1] and offsets [637], sending it to elastic: Thread id 25
+2021-08-02 21:06:59 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1071466770375032832], partitions [1] and offsets [638], sending it to elastic: Thread id 25
+2021-08-02 21:07:00 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1250164632968298497], partitions [1] and offsets [639], sending it to elastic: Thread id 25
+2021-08-02 21:07:00 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [971620109197312000], partitions [0] and offsets [579], sending it to elastic: Thread id 23
+2021-08-02 21:07:00 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1337430590241562626], partitions [1] and offsets [640], sending it to elastic: Thread id 25
+2021-08-02 21:07:00 [twitterTopicListener-2-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1274851110617047049], partitions [2] and offsets [575], sending it to elastic: Thread id 27
+2021-08-02 21:07:00 [twitterTopicListener-2-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1401121463609004037], partitions [2] and offsets [576], sending it to elastic: Thread id 27
+2021-08-02 21:07:02 [twitterTopicListener-2-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [32717116], partitions [2] and offsets [577], sending it to elastic: Thread id 27
+2021-08-02 21:07:03 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [50500679], partitions [0] and offsets [580], sending it to elastic: Thread id 23
+2021-08-02 21:07:04 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [18864044], partitions [0] and offsets [581], sending it to elastic: Thread id 23
+2021-08-02 21:07:04 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [857437608], partitions [0] and offsets [582], sending it to elastic: Thread id 23
+2021-08-02 21:07:04 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1316692888550404097], partitions [0] and offsets [583], sending it to elastic: Thread id 23
+2021-08-02 21:07:05 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1378022922], partitions [0] and offsets [584], sending it to elastic: Thread id 23
+2021-08-02 21:07:06 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1337430590241562626], partitions [1] and offsets [641], sending it to elastic: Thread id 25
+2021-08-02 21:07:06 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1062846614379741184], partitions [1] and offsets [642], sending it to elastic: Thread id 25
+2021-08-02 21:07:06 [twitterTopicListener-2-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [3523678342], partitions [2] and offsets [578], sending it to elastic: Thread id 27
+2021-08-02 21:07:06 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [2433933451], partitions [0] and offsets [585], sending it to elastic: Thread id 23
+2021-08-02 21:07:10 [twitterTopicListener-1-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1087369492236242944], partitions [1] and offsets [643], sending it to elastic: Thread id 25
+2021-08-02 21:07:11 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [350504346], partitions [0] and offsets [586], sending it to elastic: Thread id 23
+2021-08-02 21:07:12 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [1393724645329674241], partitions [0] and offsets [587], sending it to elastic: Thread id 23
+2021-08-02 21:07:12 [twitterTopicListener-2-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [976527975037526018], partitions [2] and offsets [579], sending it to elastic: Thread id 27
+2021-08-02 21:07:12 [twitterTopicListener-0-C-1] INFO  c.m.d.k.t.e.s.c.i.TwitterKafkaConsumer - 1 number of message received with keys [971835255379423234], partitions [0] and offsets [588], sending it to elastic: Thread id 23
+2021-08-02 21:07:13 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Revoke previously assigned partitions twitter-topic-0
+2021-08-02 21:07:13 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Revoke previously assigned partitions twitter-topic-1
+2021-08-02 21:07:13 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Revoke previously assigned partitions twitter-topic-2
+2021-08-02 21:07:13 [twitterTopicListener-1-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions revoked: [twitter-topic-1]
+2021-08-02 21:07:13 [twitterTopicListener-2-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions revoked: [twitter-topic-2]
+2021-08-02 21:07:13 [twitterTopicListener-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - twitterTopicListener: partitions revoked: [twitter-topic-0]
+2021-08-02 21:07:13 [twitterTopicListener-0-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Member consumer-twitterTopicListener-1-05a05609-2273-4ad8-bc40-5a2ead3bbc9c sending LeaveGroup request to coordinator localhost:39092 (id: 2147483644 rack: null) due to the consumer unsubscribed from all topics
+2021-08-02 21:07:13 [twitterTopicListener-1-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Member consumer-twitterTopicListener-2-abaf6177-4482-4960-82ad-6c6ff7f8ad5a sending LeaveGroup request to coordinator localhost:39092 (id: 2147483644 rack: null) due to the consumer unsubscribed from all topics
+2021-08-02 21:07:13 [twitterTopicListener-0-C-1] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-1, groupId=twitterTopicListener] Unsubscribed all topics or patterns and assigned partitions
+2021-08-02 21:07:13 [twitterTopicListener-2-C-1] INFO  o.a.k.c.c.i.AbstractCoordinator - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Member consumer-twitterTopicListener-3-2a004fa9-1158-4363-8913-e1a60288ffc2 sending LeaveGroup request to coordinator localhost:39092 (id: 2147483644 rack: null) due to the consumer unsubscribed from all topics
+2021-08-02 21:07:13 [twitterTopicListener-0-C-1] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService
+2021-08-02 21:07:13 [twitterTopicListener-2-C-1] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-3, groupId=twitterTopicListener] Unsubscribed all topics or patterns and assigned partitions
+2021-08-02 21:07:13 [twitterTopicListener-2-C-1] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService
+2021-08-02 21:07:13 [twitterTopicListener-1-C-1] INFO  o.a.k.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-twitterTopicListener-2, groupId=twitterTopicListener] Unsubscribed all topics or patterns and assigned partitions
+2021-08-02 21:07:13 [twitterTopicListener-1-C-1] INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService
+2021-08-02 21:07:13 [twitterTopicListener-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer - twitterTopicListener: Consumer stopped
+2021-08-02 21:07:13 [twitterTopicListener-1-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer - twitterTopicListener: Consumer stopped
+2021-08-02 21:07:13 [twitterTopicListener-2-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer$ListenerConsumer - twitterTopicListener: Consumer stopped
