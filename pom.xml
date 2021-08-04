@@ -40,6 +40,7 @@
         <twitter4j.version>4.0.7</twitter4j.version>
         <spring-cloud.version>2.2.6.RELEASE</spring-cloud.version>
         <spring-cloud-dependencies.version>Hoxton.SR9</spring-cloud-dependencies.version>
+        <elastic.version>7.9.1</elastic.version>
     </properties>
 
     <repositories>
@@ -168,6 +169,18 @@
                 <groupId>org.apache.avro</groupId>
                 <artifactId>avro</artifactId>
                 <version>${avro.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>${elastic.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <version>${elastic.version}</version>
             </dependency>
 
             <dependency>
