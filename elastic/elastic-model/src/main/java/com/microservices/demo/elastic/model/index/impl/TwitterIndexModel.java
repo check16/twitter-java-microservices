@@ -2,7 +2,7 @@ package com.microservices.demo.elastic.model.index.impl;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.microservices.demo.elastic.model.index.IndexModule;
+import com.microservices.demo.elastic.model.index.IndexModel;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.elasticsearch.annotations.DateFormat;
@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @Data
 @Builder
 @Document(indexName = "#{elasticConfigData.indexName}")
-public class TwitterIndexModel implements IndexModule {
+public class TwitterIndexModel implements IndexModel {
 
     @JsonProperty
     private String id;
